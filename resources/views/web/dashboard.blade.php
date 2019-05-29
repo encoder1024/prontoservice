@@ -181,7 +181,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="dashboard-sales.html">Sales</a>
                                         </li>
-                                        <li class="nav-item">
+                                        {{-- <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
@@ -196,11 +196,11 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -227,8 +227,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="nav-item">
+                            </li> --}}
+{{--                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Chart</a>
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -252,7 +252,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Forms</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
@@ -269,9 +269,9 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
                                         </li>
-                                        <li class="nav-item">
+{{--                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </div>
                             </li>
@@ -289,9 +289,9 @@
                                 </div>
                             </li>
                             <li class="nav-divider">
-                                Features
+                                Aplicaciones
                             </li>
-                            <li class="nav-item">
+{{--                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Pages </a>
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -339,7 +339,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
                                 <div id="submenu-7" class="collapse submenu" style="">
@@ -359,7 +359,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item">
+{{--                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
                                 <div id="submenu-8" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -396,8 +396,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="nav-item">
+                            </li> --}}
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
                                 <div id="submenu-10" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -422,7 +422,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </nav>
@@ -443,13 +443,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">E-commerce Dashboard Template </h2>
+                                <h2 class="pageheader-title">Tablero de Control y Administración</h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Tablero de Control y Administración</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -465,9 +465,9 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Pedidos Ingresados</h5>
+                                        <h5 class="text-muted">Clientes Instalados</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
+                                            <h1 class="mb-1">113</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                             <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
@@ -480,12 +480,12 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Producción</h5>
+                                        <h5 class="text-muted">Prestadores Registrados</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
+                                            <h1 class="mb-1">27</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
+                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>2.86%</span>
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue2"></div>
@@ -494,12 +494,12 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Delivery</h5>
+                                        <h5 class="text-muted">Interacciones</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">0.00</h1>
+                                            <h1 class="mb-1">57</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-primary font-weight-bold">
-                                            <span>N/A</span>
+                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>10.45%</span>
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue3"></div>
@@ -508,12 +508,12 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Caja - Pedidos Entregados</h5>
+                                        <h5 class="text-muted">Servicios Entregados</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$28000</h1>
+                                            <h1 class="mb-1">25</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
-                                            <span>-2.00%</span>
+                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>2.00%</span>
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue4"></div>
@@ -529,7 +529,10 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Pedidos Recientes</h5>
+                                    <h5 class="card-header">Interacciones Recientes</h5>
+                                    @foreach($stock as $contact)
+                                    <div>{{$contact->nombre}}</div>
+                                    @endforeach
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
@@ -537,11 +540,11 @@
                                                     <tr class="border-0">
                                                         <th class="border-0">#</th>
                                                         <th class="border-0">Imagen</th>
-                                                        <th class="border-0">Nombre Producto</th>
-                                                        <th class="border-0">Id Producto</th>
+                                                        <th class="border-0">Nombre Prestador</th>
+                                                        <th class="border-0">Id Prestador</th>
                                                         <th class="border-0">Cantidad</th>
-                                                        <th class="border-0">Precio</th>
-                                                        <th class="border-0">Tiempo Pedido</th>
+                                                        <!--th class="border-0">Precio</th-->
+                                                        <th class="border-0">Fecha Pedido</th>
                                                         <th class="border-0">Cliente</th>
                                                         <th class="border-0">Estado</th>
                                                     </tr>
@@ -555,7 +558,7 @@
                                                         <td>Product #1 </td>
                                                         <td>id000001 </td>
                                                         <td>20</td>
-                                                        <td>$80.00</td>
+                                                        <!--td>$80.00</td-->
                                                         <td>27-08-2018 01:22:12</td>
                                                         <td>Patricia J. King </td>
                                                         <td><span class="badge-dot badge-brand mr-1"></span>EnTransito </td>
@@ -568,7 +571,7 @@
                                                         <td>Product #2 </td>
                                                         <td>id000002 </td>
                                                         <td>12</td>
-                                                        <td>$180.00</td>
+                                                        {{-- <td>$180.00</td> --}}
                                                         <td>25-08-2018 21:12:56</td>
                                                         <td>Rachel J. Wicker </td>
                                                         <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
@@ -581,7 +584,7 @@
                                                         <td>Product #3 </td>
                                                         <td>id000003 </td>
                                                         <td>23</td>
-                                                        <td>$820.00</td>
+                                                        {{-- <td>$820.00</td> --}}
                                                         <td>24-08-2018 14:12:77</td>
                                                         <td>Michael K. Ledford </td>
                                                         <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
@@ -594,7 +597,7 @@
                                                         <td>Product #4 </td>
                                                         <td>id000004 </td>
                                                         <td>34</td>
-                                                        <td>$340.00</td>
+                                                        {{-- <td>$340.00</td> --}}
                                                         <td>23-08-2018 09:12:35</td>
                                                         <td>Michael K. Ledford </td>
                                                         <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
@@ -618,18 +621,18 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Customer Acquisition</h5>
+                                    <h5 class="card-header">Compras de Clientes</h5>
                                     <div class="card-body">
                                         <div class="ct-chart ct-golden-section" style="height: 354px;"></div>
                                         <div class="text-center">
                                             <span class="legend-item mr-2">
                                                     <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Returning</span>
+                                            <span class="legend-text">Recompra</span>
                                             </span>
                                             <span class="legend-item mr-2">
 
                                                     <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">First Time</span>
+                                            <span class="legend-text">Primera vez</span>
                                             </span>
                                         </div>
                                     </div>
@@ -645,20 +648,20 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header"> Product Category</h5>
+                                    <h5 class="card-header"> Prestador Grupo</h5>
                                     <div class="card-body">
                                         <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
                                         <div class="text-center m-t-40">
                                             <span class="legend-item mr-3">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">Man</span>
+                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">Agua</span>
                                             </span>
                                             <span class="legend-item mr-3">
                                                 <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Woman</span>
+                                            <span class="legend-text">Energía</span>
                                             </span>
                                             <span class="legend-item mr-3">
                                                 <span class="fa-xs text-info mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Accessories</span>
+                                            <span class="legend-text">Climatización</span>
                                             </span>
                                         </div>
                                     </div>
@@ -679,7 +682,7 @@
                                                     <option value="3">Yearly</option>
                                                 </select>
                                             </div> -->
-                                        <h5 class="mb-0"> Product Sales</h5>
+                                        <h5 class="mb-0"> Prestador Grupo</h5>
                                     </div>
                                     <div class="card-body">
                                         <div class="ct-chart-product ct-golden-section"></div>
@@ -689,7 +692,7 @@
                             <!-- ============================================================== -->
                             <!-- end product sales  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                            {{-- <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <!-- ============================================================== -->
                                 <!-- top perfomimg  -->
                                 <!-- ============================================================== -->
@@ -749,10 +752,10 @@
                                 <!-- ============================================================== -->
                                 <!-- end top perfomimg  -->
                                 <!-- ============================================================== -->
-                            </div>
+                            </div> --}}
                         </div>
 
-                        <div class="row">
+                        {{-- <div class="row">
                             <!-- ============================================================== -->
                             <!-- sales  -->
                             <!-- ============================================================== -->
@@ -829,7 +832,7 @@
                             <!-- ============================================================== -->
                             <!-- end total orders  -->
                             <!-- ============================================================== -->
-                        </div>
+                        </div> --}}
                         <div class="row">
                             <!-- ============================================================== -->
                             <!-- total revenue  -->
@@ -842,7 +845,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Revenue by Category</h5>
+                                    <h5 class="card-header">Prestador Categoria</h5>
                                     <div class="card-body">
                                         <div id="c3chart_category" style="height: 420px;"></div>
                                     </div>
@@ -854,12 +857,12 @@
 
                             <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header"> Total Revenue</h5>
+                                    <h5 class="card-header"> Total Pedidos</h5>
                                     <div class="card-body">
                                         <div id="morris_totalrevenue"></div>
                                     </div>
                                     <div class="card-footer">
-                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
+                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">260</span><span class="text-success float-right">+9.45% interanual</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -870,19 +873,23 @@
                                 <!-- social source  -->
                                 <!-- ============================================================== -->
                                 <div class="card">
-                                    <h5 class="card-header"> Sales By Social Source</h5>
+                                    <h5 class="card-header"> Ventas por Grupo</h5>
                                     <div class="card-body p-0">
                                         <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Facebook</span><span class="social-sales-count text-dark">120 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Agua</span><span class="social-sales-count text-dark">120 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Twitter</span><span class="social-sales-count text-dark">99 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Energía</span><span class="social-sales-count text-dark">99 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Instagram</span><span class="social-sales-count text-dark">76 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Climatización</span><span class="social-sales-count text-dark">76 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Pinterest</span><span class="social-sales-count text-dark">56 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Suelos</span><span class="social-sales-count text-dark">56 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Google Plus</span><span class="social-sales-count text-dark">36 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Servicio</span><span class="social-sales-count text-dark">36 Ventas</span>
                                             </li>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Estructuras</span><span class="social-sales-count text-dark">16 Ventas</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Tecnología</span><span class="social-sales-count text-dark">13 Ventas</span>
+                                            </li>   
                                         </ul>
                                     </div>
                                     <div class="card-footer text-center">
@@ -893,7 +900,7 @@
                                 <!-- end social source  -->
                                 <!-- ============================================================== -->
                             </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                            {{-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <!-- ============================================================== -->
                                 <!-- sales traffice source  -->
                                 <!-- ============================================================== -->
@@ -921,7 +928,7 @@
                                         <a href="#" class="btn-primary-link">View Details</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- ============================================================== -->
                             <!-- end sales traffice source  -->
                             <!-- ============================================================== -->
@@ -930,7 +937,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Sales By Country Traffic Source</h5>
+                                    <h5 class="card-header">Ventas por país</h5>
                                     <div class="card-body p-0">
                                         <ul class="country-sales list-group list-group-flush">
                                             <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
@@ -965,7 +972,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                             Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                             Copyright © 2020 Pornto Service. All rights reserved.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">

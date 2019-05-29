@@ -13,12 +13,8 @@
 
 Route::get('/', 'FrontEndController@index');
 
-use App\StockPedidos;
+Route::get('/stock', 'CategoriaController@index');
 
-Route::get('/stock', function() {
-	
-	//$stock = StockPedidos::all();
-   	
-    return view('web.dashboard'); //->with('stock', $stock);
+Route::resource('stock', 'CategoriaController');
 
-});
+
