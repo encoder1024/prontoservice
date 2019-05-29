@@ -19,6 +19,7 @@ class StockPedidos extends Model
 	        'volumen',
 	        'adj_close'       
     	];
+    	
 
 //    }
 }
