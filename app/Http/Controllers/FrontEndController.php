@@ -8,7 +8,7 @@ class FrontEndController extends Controller
 {
     public function index()
     {
-    	return view('web.dashboard');
+    	return view('web.index');
     }
 
     public function galeria()

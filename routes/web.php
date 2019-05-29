@@ -17,8 +17,8 @@ use App\StockPedidos;
 
 Route::get('/stock', function() {
 	
-	$stock = StockPedidos::all();
+	//$stock = StockPedidos::all();
    	
-    return view('web.dashboar')->with('stock', $stock);
+    return view('web.dashboard'); //->with('stock', $stock);
 
 });
