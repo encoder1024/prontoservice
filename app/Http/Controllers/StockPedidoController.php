@@ -14,7 +14,9 @@ class StockPedidoController extends Controller
      */
     public function index()
     {
-        //
+        $stock = StockPedido::all();
+        
+        return view('web.XXXXXXX', compact('stock'));
     }
 
     /**

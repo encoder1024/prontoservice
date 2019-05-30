@@ -473,6 +473,10 @@
                                             <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
                                         </div>
                                     </div>
+                                    <script>
+                                        var stocks = JSON.parse('{{$stocks}}'.replace(/&quot;/g,'"'));
+                                        console.log(stocks);
+                                    </script>
                                     <div id="sparkline-revenue"></div>
                                     <div class="info" style="font-size:0.8em">&nbsp;</div>
                                 </div>

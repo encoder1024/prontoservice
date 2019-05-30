@@ -127,7 +127,7 @@
     // Revenue Cards
     // ============================================================== 
 
-   var stock = [
+/*   var stock = [
           { date: "2012-01-03", open: 409.40, high: 422.75, low: 409.00, close: 422.40, volume: 10283900, adj_close: 416.26 },
           { date: "2012-01-09", open: 425.50, high: 427.75, low: 418.66, close: 419.81, volume:  9327900, adj_close: 413.70 },
           { date: "2012-01-17", open: 424.20, high: 431.37, low: 419.75, close: 420.30, volume: 10673200, adj_close: 414.19 },
@@ -181,9 +181,12 @@
           { date: "2012-12-17", open: 508.93, high: 534.90, low: 501.23, close: 519.33, volume: 20790100, adj_close: 516.32 },
           { date: "2012-12-24", open: 520.35, high: 524.25, low: 504.66, close: 509.59, volume: 11496300, adj_close: 506.64 },
           { date: "2012-12-31", open: 510.53, high: 535.40, low: 509.00, close: 532.17, volume: 23553300, adj_close: 529.09 },
-        ];
+        ];*/
 
-    $("#sparkline-revenue").sparkline($.map(stock, function(wk) { return wk.adj_close; }), {
+
+    //TODO: cargar la variable stock desde la DB (ajax?, )
+
+    $("#sparkline-revenue").sparkline($.map(stocks, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -202,8 +205,8 @@
         var idx = ev.sparklines[0].getCurrentRegionFields().offset;
         if (idx) {
             $(".info").html(
-              "Week of " + stock[idx].date 
-            + "&nbsp;&nbsp;&nbsp; Close: $" + stock[idx].adj_close);
+              "Week of " + stocks[idx].date 
+            + "&nbsp;&nbsp;&nbsp; Close: $" + stocks[idx].adj_close);
         }
 
     }).on('mouseout', function() {

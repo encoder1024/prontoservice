@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Categoria;
 use App\Grupo;
+use App\StockPedido;
 use Illuminate\Container\Container;
 
 class CategoriaController extends Controller
@@ -18,8 +19,9 @@ class CategoriaController extends Controller
     {
 		$categorias = Categoria::all();
         $grupos = Grupo::all();
+        $stocks = StockPedido::all();
 	   	
-	    return view('web.dashboard', compact('categorias', 'grupos'));
+	    return view('web.dashboard', compact('categorias', 'grupos', 'stocks'));
     }
 
     /**
