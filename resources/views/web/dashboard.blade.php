@@ -529,9 +529,10 @@
                             <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header">Interacciones Recientes</h5>
-                                    @foreach($stock as $contact)
-                                    <div>{{$contact->nombre}}</div>
+                                    @foreach($categorias as $categoria)
+                                    <div>{{$categoria->nombre}}</div>
                                     @endforeach
+                                    <div>{{$categorias[1]->nombre}}</div>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
@@ -873,19 +874,19 @@
                                     <h5 class="card-header"> Ventas por Grupo</h5>
                                     <div class="card-body p-0">
                                         <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Agua</span><span class="social-sales-count text-dark">120 Ventas</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">{{$grupos[0]->nombre}}</span><span class="social-sales-count text-dark">120 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Energía</span><span class="social-sales-count text-dark">99 Ventas</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">{{$grupos[1]->nombre}}</span><span class="social-sales-count text-dark">99 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Climatización</span><span class="social-sales-count text-dark">76 Ventas</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">{{$grupos[2]->nombre}}</span><span class="social-sales-count text-dark">76 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Suelos</span><span class="social-sales-count text-dark">56 Ventas</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">{{$grupos[3]->nombre}}</span><span class="social-sales-count text-dark">56 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Servicio</span><span class="social-sales-count text-dark">36 Ventas</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">{{$grupos[4]->nombre}}</span><span class="social-sales-count text-dark">36 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Estructuras</span><span class="social-sales-count text-dark">16 Ventas</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">{{$grupos[5]->nombre}}</span><span class="social-sales-count text-dark">16 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Tecnología</span><span class="social-sales-count text-dark">13 Ventas</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">{{$grupos[7]->nombre}}</span><span class="social-sales-count text-dark">13 Ventas</span>
                                             </li>   
                                         </ul>
                                     </div>
@@ -934,19 +935,19 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Ventas por país</h5>
+                                    <h5 class="card-header">Ventas por provincia</h5>
                                     <div class="card-body p-0">
                                         <ul class="country-sales list-group list-group-flush">
-                                            <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
-                                                <span class="">United States</span><span class="float-right text-dark">78%</span>
+                                            <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-ar" title="us" id="us"></i> </span>
+                                                <span class="">Córdoba</span><span class="float-right text-dark">78%</span>
                                             </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ca" title="ca" id="ca"></i></span><span class="">Canada</span><span class="float-right text-dark">7%</span>
+                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ar" title="ca" id="ca"></i></span><span class="">Buenos Aires</span><span class="float-right text-dark">7%</span>
                                             </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ru" title="ru" id="ru"></i></span><span class="">Russia</span><span class="float-right text-dark">4%</span>
+                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ar" title="ru" id="ru"></i></span><span class="">Capital Federal</span><span class="float-right text-dark">4%</span>
                                             </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-in" title="in" id="in"></i></span><span class="">India</span><span class="float-right text-dark">12%</span>
+                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-ar" title="in" id="in"></i></span><span class="">Santa Fe</span><span class="float-right text-dark">12%</span>
                                             </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i></span><span class="">France</span><span class="float-right text-dark">16%</span>
+                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-ar" title="fr" id="fr"></i></span><span class="">Mendoza</span><span class="float-right text-dark">16%</span>
                                             </li>
                                         </ul>
                                     </div>

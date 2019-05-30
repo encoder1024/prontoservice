@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class StockPedidos extends Model
+class StockPedido extends Model
 {
     
 //    public function stock() {

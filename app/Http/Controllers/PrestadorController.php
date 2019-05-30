@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Prestador;
 
-class StockPedidosController extends Controller
+class PrestadorController extends Controller
 {
     /**
      * Display a listing of the resource.

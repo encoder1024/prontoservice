@@ -3,23 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Categoria;
-use App\Grupo;
-use Illuminate\Container\Container;
+use App\Provincia;
 
-class CategoriaController extends Controller
+class ProvinciaController extends Controller
 {
-        /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-		$categorias = Categoria::all();
-        $grupos = Grupo::all();
-	   	
-	    return view('web.dashboard', compact('categorias', 'grupos'));
+        //
     }
 
     /**

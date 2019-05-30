@@ -15,6 +15,16 @@ Route::get('/', 'FrontEndController@index');
 
 Route::get('/stock', 'CategoriaController@index');
 
-Route::resource('stock', 'CategoriaController');
+Route::resource('categorias', 'CategoriaController');
 
+Route::resource('grupos', 'GrupoController');
 
+Route::resource('localidads', 'LocalidadController');
+
+Route::resource('prestadors', 'PrestadorController');
+
+Route::resource('provincias', 'ProvinciaController');
+
+Route::resource('servicios', 'ServicioController');
+
+Route::resource('servicioprestadors', 'ServicioPrestadorController');
