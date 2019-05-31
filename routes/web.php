@@ -13,7 +13,7 @@
 
 Route::get('/', 'FrontEndController@index');
 
-Route::get('/stock', 'CategoriaController@index');
+//Route::get('/stock', 'CategoriaController@index');
 
 Route::resource('categorias', 'CategoriaController');
 
@@ -28,3 +28,7 @@ Route::resource('provincias', 'ProvinciaController');
 Route::resource('servicios', 'ServicioController');
 
 Route::resource('servicioprestadors', 'ServicioPrestadorController');
+
+Auth::routes();
+
+Route::get('/stock', 'HomeController@index')->name('home');
