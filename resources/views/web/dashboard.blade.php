@@ -565,10 +565,10 @@
                             <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header">Interacciones Recientes</h5>
-                                    @foreach($categorias as $categoria)
+{{--TODO: importante!               @foreach($categorias as $categoria)
                                     <div>{{$categoria->nombre}}</div>
                                     @endforeach
-                                    <div>{{$categorias[1]->nombre}}</div>
+                                    <div>{{$categorias[1]->nombre}}</div> --}}
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
@@ -578,7 +578,7 @@
                                                         <th class="border-0">Imagen</th>
                                                         <th class="border-0">Nombre Prestador</th>
                                                         <th class="border-0">Id Prestador</th>
-                                                        <th class="border-0">Cantidad</th>
+                                                        <!--th class="border-0">Cantidad</th-->
                                                         <!--th class="border-0">Precio</th-->
                                                         <th class="border-0">Fecha Pedido</th>
                                                         <th class="border-0">Cliente</th>
@@ -593,7 +593,7 @@
                                                         </td>
                                                         <td>Product #1 </td>
                                                         <td>id000001 </td>
-                                                        <td>20</td>
+                                                        <!--td>20</td-->
                                                         <!--td>$80.00</td-->
                                                         <td>27-08-2018 01:22:12</td>
                                                         <td>Patricia J. King </td>
@@ -606,7 +606,7 @@
                                                         </td>
                                                         <td>Product #2 </td>
                                                         <td>id000002 </td>
-                                                        <td>12</td>
+                                                        <!--td>12</td-->
                                                         {{-- <td>$180.00</td> --}}
                                                         <td>25-08-2018 21:12:56</td>
                                                         <td>Rachel J. Wicker </td>
@@ -619,7 +619,7 @@
                                                         </td>
                                                         <td>Product #3 </td>
                                                         <td>id000003 </td>
-                                                        <td>23</td>
+                                                        <!--td>23</td-->
                                                         {{-- <td>$820.00</td> --}}
                                                         <td>24-08-2018 14:12:77</td>
                                                         <td>Michael K. Ledford </td>
@@ -632,7 +632,7 @@
                                                         </td>
                                                         <td>Product #4 </td>
                                                         <td>id000004 </td>
-                                                        <td>34</td>
+                                                        <!--td>34</td-->
                                                         {{-- <td>$340.00</td> --}}
                                                         <td>23-08-2018 09:12:35</td>
                                                         <td>Michael K. Ledford </td>
@@ -683,14 +683,14 @@
                             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <!-- <div class="float-right">
-                                                <select class="custom-select">
-                                                    <option selected>Today</option>
-                                                    <option value="1">Weekly</option>
-                                                    <option value="2">Monthly</option>
-                                                    <option value="3">Yearly</option>
-                                                </select>
-                                            </div> -->
+                                        <div class="float-right">
+                                            <select class="custom-select">
+                                                <option selected>Today</option>
+                                                <option value="1">Weekly</option>
+                                                <option value="2">Monthly</option>
+                                                <option value="3">Yearly</option>
+                                            </select>
+                                        </div>
                                         <h5 class="mb-0"> Prestador Grupo</h5>
                                     </div>
                                     <div class="card-body">
@@ -706,7 +706,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Compras de Clientes</h5>
+                                    <h5 class="card-header">Pedidos de Clientes</h5>
                                     <div class="card-body">
                                         <div class="ct-chart ct-golden-section" style="height: 354px;"></div>
                                         <div class="text-center">
