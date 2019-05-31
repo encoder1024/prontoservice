@@ -33,44 +33,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item">
+                        <!--li class="nav-item">
                             <div id="custom-search" class="top-search-bar">
                                 <input class="form-control" type="text" placeholder="Search..">
                             </div>
-                        </li>
+                        </li-->
                         <li class="nav-item dropdown notification">
                             <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
@@ -154,12 +122,23 @@
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <h5 class="mb-0 text-white nav-user-name">{{ Auth::user()->name }} </h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <!--a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a-->
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                                 <i class="fas fa-power-off mr-2"></i>
+                                                {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+
+
                             </div>
                         </li>
                     </ul>
@@ -189,13 +168,13 @@
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">Tablero Ctrl y Admin</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="index.html">E Commerce Dashboard</a>
+                                                        <a class="nav-link" href="/stock">Tablero Ctrl y Admin</a>
                                                     </li>
-                                                    <li class="nav-item">
+                                                    <!--li class="nav-item">
                                                         <a class="nav-link" href="ecommerce-product.html">Product List</a>
                                                     </li>
                                                     <li class="nav-item">
@@ -203,16 +182,16 @@
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
-                                                    </li>
+                                                    </li-->
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li class="nav-item">
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="dashboard-finance.html">Finance</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                        </li>
+                                        </li-->
                                         {{-- <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
@@ -290,9 +269,9 @@
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-elements.html">Form Elements</a>
+                                            <a class="nav-link" href="pages/form-elements.html">Formulario Registro</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="pages/form-validation.html">Parsely Validations</a>
                                         </li>
                                         <li class="nav-item">
@@ -300,7 +279,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
-                                        </li>
+                                        </li-->
 {{--                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
                                         </li> --}}
@@ -373,13 +352,13 @@
                                 </div>
                             </li> --}}
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>App Pronto Service <span class="badge badge-secondary">New</span></a>
                                 <div id="submenu-7" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/inbox.html">Inbox</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="pages/email-details.html">Email Detail</a>
                                         </li>
                                         <li class="nav-item">
@@ -387,7 +366,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/message-chat.html">Message Chat</a>
-                                        </li>
+                                        </li-->
                                     </ul>
                                 </div>
                             </li>
