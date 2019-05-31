@@ -662,14 +662,14 @@
                             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <div class="float-right">
+{{--                                         <div class="float-right">
                                             <select class="custom-select">
                                                 <option selected>Today</option>
                                                 <option value="1">Weekly</option>
                                                 <option value="2">Monthly</option>
                                                 <option value="3">Yearly</option>
                                             </select>
-                                        </div>
+                                        </div> --}}
                                         <h5 class="mb-0"> Prestador Grupo</h5>
                                     </div>
                                     <div class="card-body">
@@ -695,7 +695,7 @@
                                             </span>
                                             <span class="legend-item mr-2">
 
-                                                    <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
+                                            <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
                                             <span class="legend-text">Primera vez</span>
                                             </span>
                                         </div>
