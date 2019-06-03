@@ -94,20 +94,47 @@
     // ============================================================== 
     // 
     // 
-    var fruits = ["Banana", "Orange", "Apple", "Mango"];
-    var serie1 = [1, 5, 3, 5];
+    // https://c3js.org/samples/data_json.html Ejemplo para resolver el json...TODO: importante!!!!!
+    // 
+    var fruits = ["Jul", "Ago", "Sep", "Oct", "Nov"];
+    var serie1 = [1, 5, 3, 5, 4];
     var serie2 = [2, 3, 4, 8];
+    var serie3 = [2, 3, 4, 8, 4];
     var chart = new Chartist.Line('.ct-chart', {
         labels: fruits,
-        series: [
-            serie1,
-            serie2
-        ]
+        series: [{
+            name:'series-1',
+            data: serie1
+        }, {
+            name:'series-2',
+            data: serie2
+        }, {
+            name:'series-3',
+            data: serie3
+        }]
     }, {
+        chartPadding: {
+            right: 40
+        },
         low: 0,
         showArea: true,
         showPoint: false,
-        fullWidth: true
+        fullWidth: true,
+        series: {
+            'series-1': {
+              lineSmooth: Chartist.Interpolation.step(),
+              //lineColor: '#ff407b'
+            },
+            'series-2': {
+              lineSmooth: Chartist.Interpolation.cardinal(),
+              showArea: true
+            },
+            'series-3': {
+              lineSmooth: Chartist.Interpolation.cardinal(),  
+              showPoint: true
+            }
+        }
+
     });
 
     chart.on('draw', function(data) {
