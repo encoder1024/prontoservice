@@ -36,12 +36,12 @@
     // Product Category
     // ============================================================== 
     var chart = new Chartist.Pie('.ct-chart-category', {
-        series: [60, 30, 30],
+        series: [65, 30, 30],
         labels: ['Bananas', 'Apples', 'Grapes']
     }, {
         donut: true,
         showLabel: false,
-        donutWidth: 40
+        donutWidth: 70
 
     });
 
@@ -92,12 +92,16 @@
     // ============================================================== 
     // Customer acquisition
     // ============================================================== 
+    // 
+    // 
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var serie1 = [1, 5, 3, 5];
+    var serie2 = [2, 3, 4, 8];
     var chart = new Chartist.Line('.ct-chart', {
-        labels: ['Mon', 'Tue', 'Wed'],
+        labels: fruits,
         series: [
-            [1, 5, 2, 5],
-            [2, 3, 4, 8]
-
+            serie1,
+            serie2
         ]
     }, {
         low: 0,
@@ -110,7 +114,7 @@
         if (data.type === 'line' || data.type === 'area') {
             data.element.animate({
                 d: {
-                    begin: 2000 * data.index,
+                    begin: 1000 * data.index,
                     dur: 2000,
                     from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
                     to: data.path.clone().stringify(),
@@ -300,12 +304,11 @@
         bindto: "#c3chart_category",
         data: {
             columns: [
-                ['Men', 100],
-                ['Women', 80],
+                ['Men', 90],
+                ['Women', 300],
                 ['Accessories', 50],
                 ['Children', 40],
                 ['Apperal', 20],
-
             ],
             type: 'donut',
 
@@ -319,14 +322,11 @@
                 Accessories: '#25d5f2',
                 Children: '#ffc750',
                 Apperal: '#2ec551',
-
-
-
             }
         },
         donut: {
             label: {
-                show: false
+                show: true
             }
         },
 
