@@ -269,7 +269,8 @@
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-elements.html">Formulario Registro</a>
+                                            <a class="nav-link" href="https://forms.gle/tWS2Y6PMqRvFg28P9">Formulario Registro</a>
+                                            {{-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSet1Zz0umS75gnRYej97izXakYmzvoggiSaJn2_QRIxasjuvA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe> --}}
                                         </li>
                                         <!--li class="nav-item">
                                             <a class="nav-link" href="pages/form-validation.html">Parsely Validations</a>
