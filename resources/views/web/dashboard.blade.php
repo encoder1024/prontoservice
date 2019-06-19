@@ -549,6 +549,10 @@
                                     <div>{{$categoria->nombre}}</div>
                                     @endforeach
                                     <div>{{$categorias[1]->nombre}}</div> --}}
+                                    <script>
+                                        var llamadas = JSON.parse('{{$llamadas}}'.replace(/&quot;/g,'"'));
+                                        console.log(llamadas);
+                                    </script>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
@@ -567,56 +571,69 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>1</td>
+                                                        <td>{{$llamadas[0]->id}}</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[0]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Product #1 </td>
-                                                        <td>id000001 </td>
+                                                        <td>{{$llamadas[0]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[0]->pres_id}}</td>
                                                         <!--td>20</td-->
                                                         <!--td>$80.00</td-->
-                                                        <td>27-08-2018 01:22:12</td>
-                                                        <td>Patricia J. King </td>
-                                                        <td><span class="badge-dot badge-brand mr-1"></span>EnProceso </td>
+                                                        <td>{{$llamadas[0]->created_at}}</td>
+                                                        <td>{{$llamadas[0]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[0]->estado_pedido}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>2</td>
+                                                        <td>{{$llamadas[1]->id}}</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[1]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Product #2 </td>
-                                                        <td>id000002 </td>
-                                                        <!--td>12</td-->
-                                                        {{-- <td>$180.00</td> --}}
-                                                        <td>25-08-2018 21:12:56</td>
-                                                        <td>Rachel J. Wicker </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
+                                                        <td>{{$llamadas[1]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[1]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[1]->created_at}}</td>
+                                                        <td>{{$llamadas[1]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[1]->estado_pedido}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>3</td>
+                                                        <td>{{$llamadas[2]->id}}</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[2]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Product #3 </td>
-                                                        <td>id000003 </td>
-                                                        <!--td>23</td-->
-                                                        {{-- <td>$820.00</td> --}}
-                                                        <td>24-08-2018 14:12:77</td>
-                                                        <td>Michael K. Ledford </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
+                                                        <td>{{$llamadas[2]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[2]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[2]->created_at}}</td>
+                                                        <td>{{$llamadas[2]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[2]->estado_pedido}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>4</td>
+                                                        <td>{{$llamadas[3]->id}}</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[3]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Product #4 </td>
-                                                        <td>id000004 </td>
-                                                        <!--td>34</td-->
-                                                        {{-- <td>$340.00</td> --}}
-                                                        <td>23-08-2018 09:12:35</td>
-                                                        <td>Michael K. Ledford </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
+                                                        <td>{{$llamadas[3]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[3]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[3]->created_at}}</td>
+                                                        <td>{{$llamadas[3]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[3]->estado_pedido}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{$llamadas[4]->id}}</td>
+                                                        <td>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[4]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
+                                                        </td>
+                                                        <td>{{$llamadas[4]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[4]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[4]->created_at}}</td>
+                                                        <td>{{$llamadas[4]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[4]->estado_pedido}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>

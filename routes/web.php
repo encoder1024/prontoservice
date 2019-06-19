@@ -29,6 +29,8 @@ Route::resource('servicios', 'ServicioController');
 
 Route::resource('servicioprestadors', 'ServicioPrestadorController');
 
+Route::resource('llamadas', 'LlamadaController');
+
 Auth::routes();
 
 Route::get('/stock', 'HomeController@index')->name('home');
