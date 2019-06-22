@@ -479,18 +479,18 @@
                                     <div class="card-body">
                                         <h5 class="text-muted">Clientes Instalados</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">113</h1>
+                                            <h1 class="mb-1">{{$countUserApp}}</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
+                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcUserCount, 2) }}%</span>
                                         </div>
                                     </div>
                                     <script>
-                                        var stocks = JSON.parse('{{$stocks}}'.replace(/&quot;/g,'"'));
-                                        console.log(stocks);
+                                        var userstocks = JSON.parse('{{$userstocks}}'.replace(/&quot;/g,'"'));
+                                        console.log(userstocks);
                                     </script>
                                     <div id="sparkline-revenue"></div>
-                                    <div class="info" style="font-size:0.8em">&nbsp;</div>
+                                    <div class="info-1" style="font-size:0.8em">&nbsp;</div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -498,33 +498,43 @@
                                     <div class="card-body">
                                         <h5 class="text-muted">Prestadores Registrados</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">27</h1>
+                                            <h1 class="mb-1">{{$countPresApp}}</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>2.86%</span>
+                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcPresCount, 2) }}%</span>
                                         </div>
                                     </div>
+                                    <script>
+                                        var prestadorestock = JSON.parse('{{$prestadorestock}}'.replace(/&quot;/g,'"'));
+                                        console.log(prestadorestock);
+                                    </script>
                                     <div id="sparkline-revenue2"></div>
+                                    <div class="info-2" style="font-size:0.8em">&nbsp;</div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Interacciones</h5>
+                                        <h5 class="text-muted">Llamadas</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">57</h1>
+                                            <h1 class="mb-1">{{$countLlamada}}</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                             <span><i class="fa fa-fw fa-arrow-up"></i></span><span>10.45%</span>
                                         </div>
                                     </div>
+                                    <script>
+                                        var llamadastock = JSON.parse('{{$llamadastock}}'.replace(/&quot;/g,'"'));
+                                        console.log(llamadastock);
+                                    </script>
                                     <div id="sparkline-revenue3"></div>
+                                    <div class="info-3" style="font-size:0.8em">&nbsp;</div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Servicios Entregados</h5>
+                                        <h5 class="text-muted">Calificaciones</h5>
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">25</h1>
                                         </div>
@@ -544,11 +554,11 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Interacciones Recientes</h5>
-{{--TODO: importante!               @foreach($categorias as $categoria)
+                                    <h5 class="card-header">Llamadas Recientes</h5>
+<!-- {{--TODO: importante!               @foreach($categorias as $categoria)
                                     <div>{{$categoria->nombre}}</div>
                                     @endforeach
-                                    <div>{{$categorias[1]->nombre}}</div> --}}
+                                    <div>{{$categorias[1]->nombre}}</div> --}} -->
                                     <script>
                                         var llamadas = JSON.parse('{{$llamadas}}'.replace(/&quot;/g,'"'));
                                         console.log(llamadas);
@@ -659,7 +669,7 @@
                                         <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
                                         <div class="text-center m-t-40">
                                             <span class="legend-item mr-3">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">Agua</span>
+                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">ExAgua</span>
                                             </span>
                                             <span class="legend-item mr-3">
                                                 <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>

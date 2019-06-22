@@ -36,12 +36,13 @@
     // Product Category
     // ============================================================== 
     var chart = new Chartist.Pie('.ct-chart-category', {
-        series: [65, 30, 30],
-        labels: ['Bananas', 'Apples', 'Grapes']
+        series: [65, 10, 30],
+        labels: ['Agua', 'Energía', 'Climatización']
     }, {
         donut: true,
-        showLabel: false,
-        donutWidth: 70
+        showLabel: true,
+        donutWidth: 50
+
 
     });
 
@@ -214,7 +215,7 @@
 
     //TODO: cargar la variable stock desde la DB (ajax?, )
 
-    $("#sparkline-revenue").sparkline($.map(stocks, function(wk) { return wk.adj_close; }), {
+    $("#sparkline-revenue").sparkline($.map(userstocks, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -232,18 +233,18 @@
     ).on('sparklineRegionChange', function(ev) {
         var idx = ev.sparklines[0].getCurrentRegionFields().offset;
         if (idx) {
-            $(".info").html(
-              "Week of " + stocks[idx].date 
-            + "&nbsp;&nbsp;&nbsp; Close: $" + stocks[idx].adj_close);
+            $(".info-1").html(
+              "Week of " + userstocks[idx].date 
+            + "&nbsp;&nbsp;&nbsp; Close: " + userstocks[idx].adj_close);
         }
 
     }).on('mouseout', function() {
-        $(".info").html("&nbsp;");
+        $(".info-1").html("&nbsp;");
     });
 
 
 
-    $("#sparkline-revenue2").sparkline([3, 7, 6, 4, 5, 4, 3, 5, 5, 2, 3, 1], {
+    $("#sparkline-revenue2").sparkline($.map(prestadorestock, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -255,12 +256,24 @@
         maxSpotColor: undefined,
         highlightSpotColor: undefined,
         highlightLineColor: undefined,
-        resize: true
+        resize: true,
+        disableTooltips: true
+    }
+    ).on('sparklineRegionChange', function(ev) {
+        var idx = ev.sparklines[0].getCurrentRegionFields().offset;
+        if (idx) {
+            $(".info-2").html(
+              "Week of " + prestadorestock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; Close: " + prestadorestock[idx].adj_close);
+        }
+
+    }).on('mouseout', function() {
+        $(".info-2").html("&nbsp;");
     });
 
 
 
-    $("#sparkline-revenue3").sparkline([5, 3, 4, 6, 5, 7, 9, 4, 3, 5, 6, 1], {
+    $("#sparkline-revenue3").sparkline($.map(llamadastock, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -272,7 +285,19 @@
         maxSpotColor: undefined,
         highlightSpotColor: undefined,
         highlightLineColor: undefined,
-        resize: true
+        resize: true,
+        disableTooltips: true
+    }
+    ).on('sparklineRegionChange', function(ev) {
+        var idx = ev.sparklines[0].getCurrentRegionFields().offset;
+        if (idx) {
+            $(".info-3").html(
+              "Week of " + llamadastock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; Close: " + llamadastock[idx].adj_close);
+        }
+
+    }).on('mouseout', function() {
+        $(".info-3").html("&nbsp;");
     });
 
 
