@@ -11,6 +11,8 @@ use App\Prestador;
 use App\StockPrestador;
 use App\Llamada;
 use App\StockLlamada;
+use App\Califica;
+use App\StockCalifica;
 use Illuminate\Container\Container;
 
 class HomeController extends Controller
@@ -35,6 +37,7 @@ class HomeController extends Controller
         $categorias = Categoria::all();
         $grupos = Grupo::all();
 
+        // USERS**********************************************************
         $userstocks = StockPedido::all();
         $cantUserApp = UsersApp::all();
         $countUserApp = count($cantUserApp);
@@ -44,6 +47,7 @@ class HomeController extends Controller
         $lastWeekUserCount = floatval($userStockLastWeek->adj_close);
         $porcUserCount = ($actualUserCount/$lastWeekUserCount-1)*100;
 
+        // PRESTADORES****************************************************
         $prestadorestock = StockPrestador::all();
         $cantPresApp = Prestador::all();
         $countPresApp = count($cantPresApp);
@@ -53,14 +57,30 @@ class HomeController extends Controller
         $lastWeekPresCount = floatval($presStockLastWeek->adj_close);
         $porcPresCount = ($actualPresCount/$lastWeekPresCount-1)*100;
 
+        // LLAMADAS*******************************************************
         $llamadastock = StockLlamada::all();
         $llamadas = Llamada::orderBy('created_at', 'desc')->get();                
         $countLlamada = count($llamadas);
+        $llamaStockLastWeek = StockLlamada::orderBy('date', 'desc')->first();
 
-        
+        $actualLlamaCount = floatval($countLlamada);
+        $lastWeekLlamaCount = floatval($llamaStockLastWeek->adj_close);
+        $porcLlamaCount = ($actualLlamaCount/$lastWeekLlamaCount-1)*100;
+
+        // CALIFICACIONES*************************************************
+        $calificastock = StockCalifica::all();
+        $calificas = Califica::orderBy('created_at', 'desc')->get();                
+        $countCalifica = count($calificas);
+        $calificaStockLastWeek = StockCalifica::orderBy('date', 'desc')->first();
+
+        $actualCalificaCount = floatval($countCalifica);
+        $lastWeekCalificaCount = floatval($calificaStockLastWeek->adj_close);
+        $porcCalificaCount = ($actualCalificaCount/$lastWeekCalificaCount-1)*100;
+
+
         return view('web.dashboard', compact('categorias', 'grupos', 
-            'userstocks', 'prestadorestock', 'llamadastock', 'llamadas', 
-            'countUserApp', 'countPresApp', 'countLlamada',
-            'porcUserCount', 'porcPresCount'));
+            'userstocks', 'prestadorestock', 'llamadastock', 'calificastock','llamadas', 
+            'countUserApp', 'countPresApp', 'countLlamada', 'countCalifica',
+            'porcUserCount', 'porcPresCount', 'porcLlamaCount', 'porcCalificaCount'));
     }
 }

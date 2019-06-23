@@ -481,9 +481,19 @@
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">{{$countUserApp}}</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcUserCount, 2) }}%</span>
-                                        </div>
+                                        <?php if($porcUserCount > 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcUserCount, 2) }}%</span>
+                                            </div>
+                                        <?php elseif($porcUserCount == 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-dark font-weight-bold">
+                                                <span><i class="fa fa-fw fa-rocket"></i></span><span>{{ number_format($porcUserCount, 2) }}%</span>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-down"></i></span><span>{{ number_format($porcUserCount, 2) }}%</span>
+                                            </div>
+                                        <?php endif; ?>   
                                     </div>
                                     <script>
                                         var userstocks = JSON.parse('{{$userstocks}}'.replace(/&quot;/g,'"'));
@@ -500,9 +510,19 @@
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">{{$countPresApp}}</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcPresCount, 2) }}%</span>
-                                        </div>
+                                        <?php if($porcPresCount > 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcPresCount, 2) }}%</span>
+                                            </div>
+                                        <?php elseif($porcPresCount == 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-dark font-weight-bold">
+                                                <span><i class="fa fa-fw fa-rocket"></i></span><span>{{ number_format($porcPresCount, 2) }}%</span>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-down"></i></span><span>{{ number_format($porcPresCount, 2) }}%</span>
+                                            </div>
+                                        <?php endif; ?>     
                                     </div>
                                     <script>
                                         var prestadorestock = JSON.parse('{{$prestadorestock}}'.replace(/&quot;/g,'"'));
@@ -519,9 +539,19 @@
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">{{$countLlamada}}</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>10.45%</span>
-                                        </div>
+                                        <?php if($porcLlamaCount > 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcLlamaCount, 2) }}%</span>
+                                            </div>
+                                        <?php elseif($porcLlamaCount == 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-dark font-weight-bold">
+                                                <span><i class="fa fa-fw fa-rocket"></i></span><span>{{ number_format($porcLlamaCount, 2) }}%</span>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-down"></i></span><span>{{ number_format($porcLlamaCount, 2) }}%</span>
+                                            </div> 
+                                        <?php endif; ?> 
                                     </div>
                                     <script>
                                         var llamadastock = JSON.parse('{{$llamadastock}}'.replace(/&quot;/g,'"'));
@@ -536,13 +566,28 @@
                                     <div class="card-body">
                                         <h5 class="text-muted">Calificaciones</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">25</h1>
+                                            <h1 class="mb-1">{{$countCalifica}}</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>2.00%</span>
-                                        </div>
+                                        <?php if($porcCalificaCount > 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcCalificaCount, 2) }}%</span>
+                                            </div>
+                                        <?php elseif($porcCalificaCount == 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-dark font-weight-bold">
+                                                <span><i class="fa fa-fw fa-rocket"></i></span><span>{{ number_format($porcCalificaCount, 2) }}%</span>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-down"></i></span><span>{{ number_format($porcCalificaCount, 2) }}%</span>
+                                            </div> 
+                                        <?php endif; ?>
                                     </div>
+                                    <script>
+                                        var calificastock = JSON.parse('{{$calificastock}}'.replace(/&quot;/g,'"'));
+                                        console.log(calificastock);
+                                    </script>
                                     <div id="sparkline-revenue4"></div>
+                                    <div class="info-4" style="font-size:0.8em">&nbsp;</div>
                                 </div>
                             </div>
                         </div>

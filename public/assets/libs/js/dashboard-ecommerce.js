@@ -302,7 +302,7 @@
 
 
 
-    $("#sparkline-revenue4").sparkline([6, 5, 3, 4, 2, 5, 3, 8, 6, 4, 5, 1], {
+    $("#sparkline-revenue4").sparkline($.map(calificastock, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -314,7 +314,18 @@
         maxSpotColor: undefined,
         highlightSpotColor: undefined,
         highlightLineColor: undefined,
-        resize: true,
+        resize: true
+    }
+    ).on('sparklineRegionChange', function(ev) {
+        var idx = ev.sparklines[0].getCurrentRegionFields().offset;
+        if (idx) {
+            $(".info-4").html(
+              "Week of " + calificastock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; Close: " + calificastock[idx].adj_close);
+        }
+
+    }).on('mouseout', function() {
+        $(".info-4").html("&nbsp;");
     });
 
 
