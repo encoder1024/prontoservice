@@ -364,11 +364,13 @@
         bindto: "#c3chart_category",
         data: {
             columns: [
-                ['Men', 90],
-                ['Women', 300],
-                ['Accessories', 50],
-                ['Children', 40],
-                ['Apperal', 20],
+                ['Agua', 90],
+                ['Energía', 300],
+                ['Climatización', 50],
+                ['Suelos', 40],
+                ['Servicio', 40],
+                ['Estructuras', 40],
+                ['Tecnología', 40]
             ],
             type: 'donut',
 
@@ -377,11 +379,11 @@
             onmouseout: function(d, i) { console.log("onmouseout", d, i); },
 
             colors: {
-                Men: '#5969ff',
-                Women: '#ff407b',
-                Accessories: '#25d5f2',
-                Children: '#ffc750',
-                Apperal: '#2ec551',
+                Agua: '#5969ff',
+                Energía: '#ff407b',
+                Climatización: '#25d5f2',
+                Suelos: '#ffc750',
+                Servicio: '#2ec551',
             }
         },
         donut: {
