@@ -360,17 +360,38 @@
     // Revenue By Categories
     // ============================================================== 
 
+    // $.ajax({
+    //     url: 'http://www.prontoservice.com.ar/pspia/v1/Api.php?apicall=getCountPresByGroup',
+    //     success: function(respuesta) {
+    //         $contGral = respuesta;
+    //         console.log("Se ha podido obtener la información" + respuesta);
+    //       // var listaUsuarios = $("#lista-usuarios");
+    //       // $.each(respuesta.data, function(index, elemento) {
+    //       //   listaUsuarios.append(
+    //       //       '<div>'
+    //       //     +     '<p>' + elemento.first_name + ' ' + elemento.last_name + '</p>'
+    //       //     +     '<img src=' + elemento.avatar + '></img>'
+    //       //     + '</div>'
+    //       //   );    
+    //       // });
+    //     },
+    //     error: function() {
+    //       console.log("No se ha podido obtener la información");
+    //     }
+    // });
+
+
     var chart = c3.generate({
         bindto: "#c3chart_category",
         data: {
             columns: [
-                ['Agua', 90],
-                ['Energía', 300],
-                ['Climatización', 50],
-                ['Suelos', 40],
-                ['Servicio', 40],
-                ['Estructuras', 40],
-                ['Tecnología', 40]
+                ['Agua', cuentas[0].contAgua],
+                ['Energía', cuentas[0].contEner],
+                ['Climatización', cuentas[0].contClim],
+                ['Suelos', cuentas[0].contSuel],
+                ['Servicio', cuentas[0].contServ],
+                ['Estructuras', cuentas[0].contEstr],
+                ['Tecnología', cuentas[0].contTecn]
             ],
             type: 'donut',
 
@@ -384,6 +405,8 @@
                 Climatización: '#25d5f2',
                 Suelos: '#ffc750',
                 Servicio: '#2ec551',
+                Estructuras: '#ffff00',
+                Tecnología: '#0000ff'
             }
         },
         donut: {

@@ -936,6 +936,10 @@
                                         <div id="c3chart_category" style="height: 420px;"></div>
                                     </div>
                                 </div>
+                                <script>
+                                    var cuentas = JSON.parse('{{$jsonPresCount}}'.replace(/&quot;/g,'"'));
+                                    console.log(cuentas);
+                                </script>
                             </div>
                             <!-- ============================================================== -->
                             <!-- end category revenue  -->

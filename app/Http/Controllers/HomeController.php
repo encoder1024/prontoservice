@@ -13,6 +13,7 @@ use App\Llamada;
 use App\StockLlamada;
 use App\Califica;
 use App\StockCalifica;
+use App\VistaPresByGrupo;
 use Illuminate\Container\Container;
 
 class HomeController extends Controller
@@ -57,24 +58,62 @@ class HomeController extends Controller
         $lastWeekPresCount = floatval($presStockLastWeek->adj_close);
         $porcPresCount = ($actualPresCount/$lastWeekPresCount-1)*100;
 
-        $.ajax({
-            url: 'https://reqres.in/api/users',
-            success: function(respuesta) {
+        $contPresByGroup = VistaPresByGrupo::all();
 
-              var listaUsuarios = $("#lista-usuarios");
-              $.each(respuesta.data, function(index, elemento) {
-                listaUsuarios.append(
-                    '<div>'
-                  +     '<p>' + elemento.first_name + ' ' + elemento.last_name + '</p>'
-                  +     '<img src=' + elemento.avatar + '></img>'
-                  + '</div>'
-                );    
-              });
-            },
-            error: function() {
-              console.log("No se ha podido obtener la información");
+        $countAgua=0;
+        $countEner=0;
+        $countClim=0;
+        $countSuel=0;
+        $countServ=0;
+        $countEstr=0;
+        $countTecn=0;
+
+        $i=0;
+
+        while ($i < count($contPresByGroup)) {
+
+
+            switch ($contPresByGroup[$i]->grupo_id) {
+                case '1':
+                    $countAgua++;
+                    break;
+                case '2':
+                    $countEner++;
+                    break;
+                case '3':
+                    $countClim++;
+                    break;
+                case '4':
+                    $countSuel++;
+                    break;
+                case '5':
+                    $countServ++;
+                    break;
+                case '6':
+                    $countEstr++;
+                    break;
+                
+                default:
+                    $countTecn++;
+                    break;
             }
-        });
+            $i++;
+        }
+
+        $auxiliar = array();
+        $auxiliar["contAgua"] = $countAgua;
+        $auxiliar["contEner"] = $countEner;
+        $auxiliar["contClim"] = $countClim;
+        $auxiliar["contSuel"] = $countSuel;
+        $auxiliar["contServ"] = $countServ;
+        $auxiliar["contEstr"] = $countEstr;
+        $auxiliar["contTecn"] = $countTecn;
+
+        $prestByGroup = array();
+
+        array_push($prestByGroup, $auxiliar);
+
+        $jsonPresCount = json_encode($prestByGroup);
 
         // LLAMADAS*******************************************************
         $llamadastock = StockLlamada::all();
@@ -100,6 +139,7 @@ class HomeController extends Controller
         return view('web.dashboard', compact('categorias', 'grupos', 
             'userstocks', 'prestadorestock', 'llamadastock', 'calificastock','llamadas', 
             'countUserApp', 'countPresApp', 'countLlamada', 'countCalifica',
-            'porcUserCount', 'porcPresCount', 'porcLlamaCount', 'porcCalificaCount'));
+            'porcUserCount', 'porcPresCount', 'porcLlamaCount', 'porcCalificaCount', 'jsonPresCount'));
     }
+
 }
