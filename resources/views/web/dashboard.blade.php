@@ -192,7 +192,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="dashboard-sales.html">Sales</a>
                                         </li-->
-                                        {{-- <li class="nav-item">
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
@@ -207,11 +207,11 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </li> --}}
+                                        </li-->
                                     </ul>
                                 </div>
                             </li>
-                            {{-- <li class="nav-item">
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -238,8 +238,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li> --}}
-{{--                             <li class="nav-item">
+                            </li--> 
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Chart</a>
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -263,7 +263,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li> --}}
+                            </li-->
                             <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Forms</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
@@ -281,9 +281,9 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
                                         </li-->
-{{--                                         <li class="nav-item">
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
-                                        </li> --}}
+                                        </li-->
                                     </ul>
                                 </div>
                             </li>
@@ -303,7 +303,7 @@
                             <li class="nav-divider">
                                 Aplicaciones
                             </li>
-{{--                             <li class="nav-item">
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Pages </a>
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -351,7 +351,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li> --}}
+                            </li-->
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>App Pronto Service <span class="badge badge-secondary">New</span></a>
                                 <div id="submenu-7" class="collapse submenu" style="">
@@ -371,7 +371,7 @@
                                     </ul>
                                 </div>
                             </li>
-{{--                             <li class="nav-item">
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
                                 <div id="submenu-8" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -408,8 +408,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li> --}}
-                            {{-- <li class="nav-item">
+                            </li--> 
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
                                 <div id="submenu-10" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -434,7 +434,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li> --}}
+                            </li-->
                         </ul>
                     </div>
                 </nav>
@@ -472,7 +472,6 @@
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
-
                         <div class="row">
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
@@ -600,10 +599,10 @@
                             <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header">Llamadas Recientes</h5>
-<!-- {{--TODO: importante!               @foreach($categorias as $categoria)
+<!-- TODO: importante!               @foreach($categorias as $categoria)
                                     <div>{{$categoria->nombre}}</div>
                                     @endforeach
-                                    <div>{{$categorias[1]->nombre}}</div> --}} -->
+                                    <div>{{$categorias[1]->nombre}}</div> -->
                                     <script>
                                         var llamadas = JSON.parse('{{$llamadas}}'.replace(/&quot;/g,'"'));
                                         console.log(llamadas);
@@ -703,11 +702,11 @@
                             <!-- end recent orders  -->
                             <!-- ============================================================== -->
                         </div>
-                        <div class="row">
+                        <!--div class="row"-->
                             <!-- ============================================================== -->
               				                        <!-- product category  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <!--div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header"> Prestador Grupo</h5>
                                     <div class="card-body">
@@ -727,12 +726,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end product category  -->
                                    <!-- product sales  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <!--div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-header">
 {{--                                         <div class="float-right">
@@ -749,14 +748,14 @@
                                         <div class="ct-chart-product ct-golden-section"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end product sales  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- customer acquistion  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <!--div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header">Pedidos de Clientes</h5>
                                     <div class="card-body">
@@ -774,15 +773,15 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end customer acquistion  -->
                             <!-- ============================================================== -->
-                            {{-- <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                            <!--div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12"-->
                                 <!-- ============================================================== -->
                                 <!-- top perfomimg  -->
                                 <!-- ============================================================== -->
-                                <div class="card">
+                       <!--         <div class="card">
                                     <h5 class="card-header">Top Performing Campaigns</h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
@@ -834,18 +833,18 @@
                                             </table>
                                         </div>
                                     </div>
-                                </div>
+                                </div-->
                                 <!-- ============================================================== -->
                                 <!-- end top perfomimg  -->
                                 <!-- ============================================================== -->
-                            </div> --}}
-                        </div>
+                            <!--/div-->
+                        
 
-                        {{-- <div class="row">
+                         <!--div class="row"-->
                             <!-- ============================================================== -->
                             <!-- sales  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<!--                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">Sales</h5>
@@ -857,14 +856,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ============================================================== -->
                             <!-- end sales  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- new customer  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<!--                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">New Customer</h5>
@@ -876,14 +875,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ============================================================== -->
                             <!-- end new customer  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- visitor  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<!--                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">Visitor</h5>
@@ -895,14 +894,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ============================================================== -->
                             <!-- end visitor  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- total orders  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<!--                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">Total Orders</h5>
@@ -914,11 +913,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ============================================================== -->
                             <!-- end total orders  -->
                             <!-- ============================================================== -->
-                        </div> --}}
+                        <!--/div-->
                         <div class="row">
                             <!-- ============================================================== -->
                             <!-- total revenue  -->
@@ -947,22 +946,22 @@
 
                             <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header"> Total Pedidos</h5>
+                                    <h5 class="card-header"> Total Llamadas</h5>
                                     <div class="card-body">
                                         <div id="morris_totalrevenue"></div>
                                     </div>
                                     <div class="card-footer">
-                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">260</span><span class="text-success float-right">+9.45% interanual</span></p>
+                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">6</span><span class="text-success float-right">+400.00% interanual</span></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <!--div class="row"-->
+                            <!--div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12"-->
                                 <!-- ============================================================== -->
                                 <!-- social source  -->
                                 <!-- ============================================================== -->
-                                <div class="card">
+                                <!--div class="card">
                                     <h5 class="card-header"> Ventas por Grupo</h5>
                                     <div class="card-body p-0">
                                         <ul class="social-sales list-group list-group-flush">
@@ -985,16 +984,16 @@
                                     <div class="card-footer text-center">
                                         <a href="#" class="btn-primary-link">View Details</a>
                                     </div>
-                                </div>
+                                </div-->
                                 <!-- ============================================================== -->
                                 <!-- end social source  -->
                                 <!-- ============================================================== -->
-                            </div>
-                            {{-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <!--/div-->
+                            <!--div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"-->
                                 <!-- ============================================================== -->
                                 <!-- sales traffice source  -->
                                 <!-- ============================================================== -->
-                                <div class="card">
+                                <!--div class="card">
                                     <h5 class="card-header"> Sales By Traffic Source</h5>
                                     <div class="card-body p-0">
                                         <ul class="traffic-sales list-group list-group-flush">
@@ -1018,14 +1017,14 @@
                                         <a href="#" class="btn-primary-link">View Details</a>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end sales traffice source  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- sales traffic country source  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                            <!--div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header">Ventas por provincia</h5>
                                     <div class="card-body p-0">
@@ -1047,11 +1046,11 @@
                                         <a href="#" class="btn-primary-link">View Details</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end sales traffice country source  -->
                             <!-- ============================================================== -->
-                        </div>
+                        <!--/div-->
                     </div>
                 </div>
             </div>

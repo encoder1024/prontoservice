@@ -234,8 +234,8 @@
         var idx = ev.sparklines[0].getCurrentRegionFields().offset;
         if (idx) {
             $(".info-1").html(
-              "Week of " + userstocks[idx].date 
-            + "&nbsp;&nbsp;&nbsp; Close: " + userstocks[idx].adj_close);
+              "Fecha: " + userstocks[idx].date 
+            + "&nbsp;&nbsp;&nbsp; valor: " + userstocks[idx].adj_close);
         }
 
     }).on('mouseout', function() {
@@ -263,8 +263,8 @@
         var idx = ev.sparklines[0].getCurrentRegionFields().offset;
         if (idx) {
             $(".info-2").html(
-              "Week of " + prestadorestock[idx].date 
-            + "&nbsp;&nbsp;&nbsp; Close: " + prestadorestock[idx].adj_close);
+              "Fecha: " + prestadorestock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; valor: " + prestadorestock[idx].adj_close);
         }
 
     }).on('mouseout', function() {
@@ -292,8 +292,8 @@
         var idx = ev.sparklines[0].getCurrentRegionFields().offset;
         if (idx) {
             $(".info-3").html(
-              "Week of " + llamadastock[idx].date 
-            + "&nbsp;&nbsp;&nbsp; Close: " + llamadastock[idx].adj_close);
+              "Fecha: " + llamadastock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; valor: " + llamadastock[idx].adj_close);
         }
 
     }).on('mouseout', function() {
@@ -320,8 +320,8 @@
         var idx = ev.sparklines[0].getCurrentRegionFields().offset;
         if (idx) {
             $(".info-4").html(
-              "Week of " + calificastock[idx].date 
-            + "&nbsp;&nbsp;&nbsp; Close: " + calificastock[idx].adj_close);
+              "Fecha: " + calificastock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; valor: " + calificastock[idx].adj_close);
         }
 
     }).on('mouseout', function() {
@@ -338,12 +338,12 @@
         element: 'morris_totalrevenue',
         behaveLikeLine: true,
         data: [
-            { x: '2016 Q1', y: 0, },
-            { x: '2016 Q2', y: 7500, },
-            { x: '2017 Q3', y: 15000, },
-            { x: '2017 Q4', y: 22500, },
-            { x: '2018 Q5', y: 30000, },
-            { x: '2018 Q6', y: 40000, }
+            { x: '2019 Q3', y: 0, },
+            { x: '2019 Q4', y: 100, },
+            { x: '2020 Q1', y: 150, },
+            { x: '2020 Q2', y: 225, },
+            { x: '2020 Q3', y: 300, },
+            { x: '2020 Q4', y: 400, }
         ],
         xkey: 'x',
         ykeys: ['y'],
@@ -405,17 +405,16 @@
                 Climatización: '#25d5f2',
                 Suelos: '#ffc750',
                 Servicio: '#2ec551',
-                Estructuras: '#ffff00',
-                Tecnología: '#0000ff'
+                Estructuras: '#99ff00',
+                Tecnología: '#0099ff'
             }
         },
         donut: {
             label: {
-                show: true
+                format: function (value, ratio, id) {
+                    return d3.format('')(value);
+                }
             }
         },
-
-
-
     });
 
