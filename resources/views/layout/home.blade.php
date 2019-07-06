@@ -33,7 +33,7 @@
                 <div class="navigation" id="navigation-scroll">
                         <div class="row">
                             <div class="col-md-11 col-xs-10">
-                                <a href="index.html"><span id="logo"><strong class="strong">Pronto</strong> Service</span></a>
+                                <a href="#"><span id="logo"><strong class="strong">Pronto</strong> Service</span></a>
                             </div>
                             <div class="col-md-1 col-xs-2">
                                 <p class="nav-button">
@@ -55,10 +55,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="banner-text">
-                             <h2 class="animation-box wow bounceIn animated"><strong class="strong">Un toque para</strong><br>
-                            todas las necesidades</h2>
+                             <h2 class="animation-box wow bounceIn animated"><strong class="strong">Una solución para</strong><br>
+                            todas tus necesidades</h2>
                             <p>
-                                 Pronto Service ha sido descargada por 10K+ personas desde 13 paises alrededor del mundo en los últimos tres meses. Descargar esta aplicación es gratis en tu dispositivo Android. Comentarios y calificaciones son muy apreciadas.
+                                 Pronto Service ha sido descargada por más de 1000 personas en los últimos meses. Descargar esta aplicación es gratis en tu dispositivo Android. Comentarios y calificaciones son muy apreciadas.
                             </p>
                             <a href="#" class="btn btn-download wow animated fadeInLeft">
                             <i class="fa fa-android pull-left"></i>
@@ -180,7 +180,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 wow animated fadeInLeft">
-                    <img src="img/mb2.png" alt="" class="pull-right left-img">
+                    <img src="img/paraelusuario.jpg" alt="" class="pull-right left-img">
                 </div>
                 <div class="col-md-6 col-sm-6 wow animated fadeInRight">
                     <div class="features-list">
@@ -221,7 +221,7 @@
                     </div> <!-- .features-list -->
                 </div>
                 <div class="col-md-6 col-sm-6 wow animated fadeInRight">
-                    <img src="img/mb2v.png" alt="" class="pull-left right-img">
+                    <img src="img/paraelprestador.jpg" alt="" class="pull-left right-img">
                 </div>
             </div> <!-- /.row -->
         </div> <!-- /.container -->
@@ -464,29 +464,29 @@
                         <a href="www.prontoservice.com.ar">prontoservice.com.ar</a>
                     </p>
                 </div>
-            </div> <!-- /.row -->
-            <form class="row form wrapper">
+            </div> 
+            <!--form class="row form wrapper">
                 <h3>Leave A Message</h3>
                 <div class="col-sm-4 col-xs-12 form-group">
                     <label class="sr-only">Name</label>
                     <input name="name" class="form-control" type="text" placeholder="First Name">
-                </div> <!-- /.form-group -->
+                </div> 
                 <div class="col-sm-4 col-xs-12 form-group">
                     <label class="sr-only">Email</label>
                     <input name="email" class="form-control" type="email" placeholder="Email address">
-                </div> <!-- /.form-group -->
+                </div> 
                 <div class="col-sm-4 col-xs-12 form-group">
                     <label class="sr-only">Website</label>
                     <input name="website" class="form-control" type="text" placeholder="Your website">
-                </div> <!-- /.form-group -->
+                </div> 
                 <div class="row">
                     <div class="col-md-12 col-xs-12 form-group">
                         <label class="sr-only">Message</label>
                         <textarea class="message form-control" placeholder="Write message"></textarea>
-                    </div> <!-- /.form-group -->
+                    </div> 
                     <input class="btn btn-sub" type="submit" value="Send Message">
                 </div>
-            </form> <!-- /.row -->
+            </form-->
         </div> <!-- /.container -->
     </section> <!-- /#contact -->
 

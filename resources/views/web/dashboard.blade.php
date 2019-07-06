@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <title>Pronto Service Admin</title>
+    <link rel="shortcut icon" href="img/ic_launcher_new.png" type="image/x-icon">
 </head>
 
 <body>
