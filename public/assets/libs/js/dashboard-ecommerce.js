@@ -36,12 +36,13 @@
     // Product Category
     // ============================================================== 
     var chart = new Chartist.Pie('.ct-chart-category', {
-        series: [60, 30, 30],
-        labels: ['Bananas', 'Apples', 'Grapes']
+        series: [65, 10, 30],
+        labels: ['Agua', 'Energía', 'Climatización']
     }, {
         donut: true,
-        showLabel: false,
-        donutWidth: 40
+        showLabel: true,
+        donutWidth: 50
+
 
     });
 
@@ -92,25 +93,56 @@
     // ============================================================== 
     // Customer acquisition
     // ============================================================== 
+    // 
+    // 
+    // https://c3js.org/samples/data_json.html Ejemplo para resolver el json...TODO: importante!!!!!
+    // 
+    var fruits = ["Jul", "Ago", "Sep", "Oct", "Nov"];
+    var serie1 = [1, 5, 3, 5, 4];
+    var serie2 = [2, 3, 4, 8];
+    var serie3 = [2, 3, 4, 8, 4];
     var chart = new Chartist.Line('.ct-chart', {
-        labels: ['Mon', 'Tue', 'Wed'],
-        series: [
-            [1, 5, 2, 5],
-            [2, 3, 4, 8]
-
-        ]
+        labels: fruits,
+        series: [{
+            name:'series-1',
+            data: serie1
+        }, {
+            name:'series-2',
+            data: serie2
+        }, {
+            name:'series-3',
+            data: serie3
+        }]
     }, {
+        chartPadding: {
+            right: 40
+        },
         low: 0,
         showArea: true,
         showPoint: false,
-        fullWidth: true
+        fullWidth: true,
+        series: {
+            'series-1': {
+              lineSmooth: Chartist.Interpolation.step(),
+              //lineColor: '#ff407b'
+            },
+            'series-2': {
+              lineSmooth: Chartist.Interpolation.cardinal(),
+              showArea: true
+            },
+            'series-3': {
+              lineSmooth: Chartist.Interpolation.cardinal(),  
+              showPoint: true
+            }
+        }
+
     });
 
     chart.on('draw', function(data) {
         if (data.type === 'line' || data.type === 'area') {
             data.element.animate({
                 d: {
-                    begin: 2000 * data.index,
+                    begin: 1000 * data.index,
                     dur: 2000,
                     from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
                     to: data.path.clone().stringify(),
@@ -120,14 +152,11 @@
         }
     });
 
-
-
-
     // ============================================================== 
     // Revenue Cards
     // ============================================================== 
 
-   var stock = [
+/*   var stock = [
           { date: "2012-01-03", open: 409.40, high: 422.75, low: 409.00, close: 422.40, volume: 10283900, adj_close: 416.26 },
           { date: "2012-01-09", open: 425.50, high: 427.75, low: 418.66, close: 419.81, volume:  9327900, adj_close: 413.70 },
           { date: "2012-01-17", open: 424.20, high: 431.37, low: 419.75, close: 420.30, volume: 10673200, adj_close: 414.19 },
@@ -181,9 +210,12 @@
           { date: "2012-12-17", open: 508.93, high: 534.90, low: 501.23, close: 519.33, volume: 20790100, adj_close: 516.32 },
           { date: "2012-12-24", open: 520.35, high: 524.25, low: 504.66, close: 509.59, volume: 11496300, adj_close: 506.64 },
           { date: "2012-12-31", open: 510.53, high: 535.40, low: 509.00, close: 532.17, volume: 23553300, adj_close: 529.09 },
-        ];
+        ];*/
 
-    $("#sparkline-revenue").sparkline($.map(stock, function(wk) { return wk.adj_close; }), {
+
+    //TODO: cargar la variable stock desde la DB (ajax?, )
+
+    $("#sparkline-revenue").sparkline($.map(userstocks, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -201,18 +233,18 @@
     ).on('sparklineRegionChange', function(ev) {
         var idx = ev.sparklines[0].getCurrentRegionFields().offset;
         if (idx) {
-            $(".info").html(
-              "Week of " + stock[idx].date 
-            + "&nbsp;&nbsp;&nbsp; Close: $" + stock[idx].adj_close);
+            $(".info-1").html(
+              "Fecha: " + userstocks[idx].date 
+            + "&nbsp;&nbsp;&nbsp; valor: " + userstocks[idx].adj_close);
         }
 
     }).on('mouseout', function() {
-        $(".info").html("&nbsp;");
+        $(".info-1").html("&nbsp;");
     });
 
 
 
-    $("#sparkline-revenue2").sparkline([3, 7, 6, 4, 5, 4, 3, 5, 5, 2, 3, 1], {
+    $("#sparkline-revenue2").sparkline($.map(prestadorestock, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -224,12 +256,24 @@
         maxSpotColor: undefined,
         highlightSpotColor: undefined,
         highlightLineColor: undefined,
-        resize: true
+        resize: true,
+        disableTooltips: true
+    }
+    ).on('sparklineRegionChange', function(ev) {
+        var idx = ev.sparklines[0].getCurrentRegionFields().offset;
+        if (idx) {
+            $(".info-2").html(
+              "Fecha: " + prestadorestock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; valor: " + prestadorestock[idx].adj_close);
+        }
+
+    }).on('mouseout', function() {
+        $(".info-2").html("&nbsp;");
     });
 
 
 
-    $("#sparkline-revenue3").sparkline([5, 3, 4, 6, 5, 7, 9, 4, 3, 5, 6, 1], {
+    $("#sparkline-revenue3").sparkline($.map(llamadastock, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -241,12 +285,24 @@
         maxSpotColor: undefined,
         highlightSpotColor: undefined,
         highlightLineColor: undefined,
-        resize: true
+        resize: true,
+        disableTooltips: true
+    }
+    ).on('sparklineRegionChange', function(ev) {
+        var idx = ev.sparklines[0].getCurrentRegionFields().offset;
+        if (idx) {
+            $(".info-3").html(
+              "Fecha: " + llamadastock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; valor: " + llamadastock[idx].adj_close);
+        }
+
+    }).on('mouseout', function() {
+        $(".info-3").html("&nbsp;");
     });
 
 
 
-    $("#sparkline-revenue4").sparkline([6, 5, 3, 4, 2, 5, 3, 8, 6, 4, 5, 1], {
+    $("#sparkline-revenue4").sparkline($.map(calificastock, function(wk) { return wk.adj_close; }), {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -258,7 +314,18 @@
         maxSpotColor: undefined,
         highlightSpotColor: undefined,
         highlightLineColor: undefined,
-        resize: true,
+        resize: true
+    }
+    ).on('sparklineRegionChange', function(ev) {
+        var idx = ev.sparklines[0].getCurrentRegionFields().offset;
+        if (idx) {
+            $(".info-4").html(
+              "Fecha: " + calificastock[idx].date 
+            + "&nbsp;&nbsp;&nbsp; valor: " + calificastock[idx].adj_close);
+        }
+
+    }).on('mouseout', function() {
+        $(".info-4").html("&nbsp;");
     });
 
 
@@ -271,12 +338,12 @@
         element: 'morris_totalrevenue',
         behaveLikeLine: true,
         data: [
-            { x: '2016 Q1', y: 0, },
-            { x: '2016 Q2', y: 7500, },
-            { x: '2017 Q3', y: 15000, },
-            { x: '2017 Q4', y: 22500, },
-            { x: '2018 Q5', y: 30000, },
-            { x: '2018 Q6', y: 40000, }
+            { x: '2019 Q3', y: 0, },
+            { x: '2019 Q4', y: 100, },
+            { x: '2020 Q1', y: 150, },
+            { x: '2020 Q2', y: 225, },
+            { x: '2020 Q3', y: 300, },
+            { x: '2020 Q4', y: 400, }
         ],
         xkey: 'x',
         ykeys: ['y'],
@@ -293,16 +360,38 @@
     // Revenue By Categories
     // ============================================================== 
 
+    // $.ajax({
+    //     url: 'http://www.prontoservice.com.ar/pspia/v1/Api.php?apicall=getCountPresByGroup',
+    //     success: function(respuesta) {
+    //         $contGral = respuesta;
+    //         console.log("Se ha podido obtener la información" + respuesta);
+    //       // var listaUsuarios = $("#lista-usuarios");
+    //       // $.each(respuesta.data, function(index, elemento) {
+    //       //   listaUsuarios.append(
+    //       //       '<div>'
+    //       //     +     '<p>' + elemento.first_name + ' ' + elemento.last_name + '</p>'
+    //       //     +     '<img src=' + elemento.avatar + '></img>'
+    //       //     + '</div>'
+    //       //   );    
+    //       // });
+    //     },
+    //     error: function() {
+    //       console.log("No se ha podido obtener la información");
+    //     }
+    // });
+
+
     var chart = c3.generate({
         bindto: "#c3chart_category",
         data: {
             columns: [
-                ['Men', 100],
-                ['Women', 80],
-                ['Accessories', 50],
-                ['Children', 40],
-                ['Apperal', 20],
-
+                ['Agua', cuentas[0].contAgua],
+                ['Energía', cuentas[0].contEner],
+                ['Climatización', cuentas[0].contClim],
+                ['Suelos', cuentas[0].contSuel],
+                ['Servicio', cuentas[0].contServ],
+                ['Estructuras', cuentas[0].contEstr],
+                ['Tecnología', cuentas[0].contTecn]
             ],
             type: 'donut',
 
@@ -311,23 +400,21 @@
             onmouseout: function(d, i) { console.log("onmouseout", d, i); },
 
             colors: {
-                Men: '#5969ff',
-                Women: '#ff407b',
-                Accessories: '#25d5f2',
-                Children: '#ffc750',
-                Apperal: '#2ec551',
-
-
-
+                Agua: '#5969ff',
+                Energía: '#ff407b',
+                Climatización: '#25d5f2',
+                Suelos: '#ffc750',
+                Servicio: '#2ec551',
+                Estructuras: '#99ff00',
+                Tecnología: '#0099ff'
             }
         },
         donut: {
             label: {
-                show: false
+                format: function (value, ratio, id) {
+                    return d3.format('')(value);
+                }
             }
         },
-
-
-
     });
 

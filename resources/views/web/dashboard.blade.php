@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Pronto Service Admin</title>
+    <link rel="shortcut icon" href="img/ic_launcher_new.png" type="image/x-icon">
 </head>
 
 <body>
@@ -28,17 +29,17 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Concept</a>
+                <a class="navbar-brand" href="index.html">Pronto Service + Admin</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item">
+                        <!--li class="nav-item">
                             <div id="custom-search" class="top-search-bar">
                                 <input class="form-control" type="text" placeholder="Search..">
                             </div>
-                        </li>
+                        </li-->
                         <li class="nav-item dropdown notification">
                             <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
@@ -122,12 +123,23 @@
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <h5 class="mb-0 text-white nav-user-name">{{ Auth::user()->name }} </h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <!--a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a-->
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                                 <i class="fas fa-power-off mr-2"></i>
+                                                {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+
+
                             </div>
                         </li>
                     </ul>
@@ -157,13 +169,13 @@
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">Tablero Ctrl y Admin</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="index.html">E Commerce Dashboard</a>
+                                                        <a class="nav-link" href="/stock">Tablero Ctrl y Admin</a>
                                                     </li>
-                                                    <li class="nav-item">
+                                                    <!--li class="nav-item">
                                                         <a class="nav-link" href="ecommerce-product.html">Product List</a>
                                                     </li>
                                                     <li class="nav-item">
@@ -171,17 +183,17 @@
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
-                                                    </li>
+                                                    </li-->
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li class="nav-item">
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="dashboard-finance.html">Finance</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                        </li>
-                                        <li class="nav-item">
+                                        </li-->
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
@@ -196,11 +208,11 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </li>
+                                        </li-->
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -227,8 +239,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="nav-item">
+                            </li--> 
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Chart</a>
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -252,15 +264,16 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li-->
                             <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Forms</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-elements.html">Form Elements</a>
+                                            <a class="nav-link" href="https://forms.gle/tWS2Y6PMqRvFg28P9">Formulario Registro</a>
+                                            {{-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSet1Zz0umS75gnRYej97izXakYmzvoggiSaJn2_QRIxasjuvA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe> --}}
                                         </li>
-                                        <li class="nav-item">
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="pages/form-validation.html">Parsely Validations</a>
                                         </li>
                                         <li class="nav-item">
@@ -268,10 +281,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
-                                        </li>
-                                        <li class="nav-item">
+                                        </li-->
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
-                                        </li>
+                                        </li-->
                                     </ul>
                                 </div>
                             </li>
@@ -289,9 +302,9 @@
                                 </div>
                             </li>
                             <li class="nav-divider">
-                                Features
+                                Aplicaciones
                             </li>
-                            <li class="nav-item">
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Pages </a>
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -339,15 +352,15 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li-->
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>App Pronto Service <span class="badge badge-secondary">New</span></a>
                                 <div id="submenu-7" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/inbox.html">Inbox</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!--li class="nav-item">
                                             <a class="nav-link" href="pages/email-details.html">Email Detail</a>
                                         </li>
                                         <li class="nav-item">
@@ -355,11 +368,11 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/message-chat.html">Message Chat</a>
-                                        </li>
+                                        </li-->
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
                                 <div id="submenu-8" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -396,8 +409,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="nav-item">
+                            </li--> 
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
                                 <div id="submenu-10" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -422,7 +435,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li-->
                         </ul>
                     </div>
                 </nav>
@@ -443,13 +456,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">E-commerce Dashboard Template </h2>
+                                <h2 class="pageheader-title">Tablero de Control y Administración</h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Tablero de Control y Administración</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -460,63 +473,121 @@
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
-
                         <div class="row">
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Pedidos Ingresados</h5>
+                                        <h5 class="text-muted">Clientes Instalados</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
+                                            <h1 class="mb-1">{{$countUserApp}}</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
-                                        </div>
+                                        <?php if($porcUserCount > 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcUserCount, 2) }}%</span>
+                                            </div>
+                                        <?php elseif($porcUserCount == 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-dark font-weight-bold">
+                                                <span><i class="fa fa-fw fa-rocket"></i></span><span>{{ number_format($porcUserCount, 2) }}%</span>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-down"></i></span><span>{{ number_format($porcUserCount, 2) }}%</span>
+                                            </div>
+                                        <?php endif; ?>   
                                     </div>
+                                    <script>
+                                        var userstocks = JSON.parse('{{$userstocks}}'.replace(/&quot;/g,'"'));
+                                        console.log(userstocks);
+                                    </script>
                                     <div id="sparkline-revenue"></div>
-                                    <div class="info" style="font-size:0.8em">&nbsp;</div>
+                                    <div class="info-1" style="font-size:0.8em">&nbsp;</div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Producción</h5>
+                                        <h5 class="text-muted">Prestadores Registrados</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
+                                            <h1 class="mb-1">{{$countPresApp}}</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
-                                        </div>
+                                        <?php if($porcPresCount > 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcPresCount, 2) }}%</span>
+                                            </div>
+                                        <?php elseif($porcPresCount == 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-dark font-weight-bold">
+                                                <span><i class="fa fa-fw fa-rocket"></i></span><span>{{ number_format($porcPresCount, 2) }}%</span>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-down"></i></span><span>{{ number_format($porcPresCount, 2) }}%</span>
+                                            </div>
+                                        <?php endif; ?>     
                                     </div>
+                                    <script>
+                                        var prestadorestock = JSON.parse('{{$prestadorestock}}'.replace(/&quot;/g,'"'));
+                                        console.log(prestadorestock);
+                                    </script>
                                     <div id="sparkline-revenue2"></div>
+                                    <div class="info-2" style="font-size:0.8em">&nbsp;</div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Delivery</h5>
+                                        <h5 class="text-muted">Llamadas</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">0.00</h1>
+                                            <h1 class="mb-1">{{$countLlamada}}</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-primary font-weight-bold">
-                                            <span>N/A</span>
-                                        </div>
+                                        <?php if($porcLlamaCount > 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcLlamaCount, 2) }}%</span>
+                                            </div>
+                                        <?php elseif($porcLlamaCount == 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-dark font-weight-bold">
+                                                <span><i class="fa fa-fw fa-rocket"></i></span><span>{{ number_format($porcLlamaCount, 2) }}%</span>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-down"></i></span><span>{{ number_format($porcLlamaCount, 2) }}%</span>
+                                            </div> 
+                                        <?php endif; ?> 
                                     </div>
+                                    <script>
+                                        var llamadastock = JSON.parse('{{$llamadastock}}'.replace(/&quot;/g,'"'));
+                                        console.log(llamadastock);
+                                    </script>
                                     <div id="sparkline-revenue3"></div>
+                                    <div class="info-3" style="font-size:0.8em">&nbsp;</div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Caja - Pedidos Entregados</h5>
+                                        <h5 class="text-muted">Calificaciones</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$28000</h1>
+                                            <h1 class="mb-1">{{$countCalifica}}</h1>
                                         </div>
-                                        <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
-                                            <span>-2.00%</span>
-                                        </div>
+                                        <?php if($porcCalificaCount > 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-up"></i></span><span>{{ number_format($porcCalificaCount, 2) }}%</span>
+                                            </div>
+                                        <?php elseif($porcCalificaCount == 0) : ?>
+                                            <div class="metric-label d-inline-block float-right text-dark font-weight-bold">
+                                                <span><i class="fa fa-fw fa-rocket"></i></span><span>{{ number_format($porcCalificaCount, 2) }}%</span>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span><i class="fa fa-fw fa-arrow-down"></i></span><span>{{ number_format($porcCalificaCount, 2) }}%</span>
+                                            </div> 
+                                        <?php endif; ?>
                                     </div>
+                                    <script>
+                                        var calificastock = JSON.parse('{{$calificastock}}'.replace(/&quot;/g,'"'));
+                                        console.log(calificastock);
+                                    </script>
                                     <div id="sparkline-revenue4"></div>
+                                    <div class="info-4" style="font-size:0.8em">&nbsp;</div>
                                 </div>
                             </div>
                         </div>
@@ -524,12 +595,19 @@
                             <!-- ============================================================== -->
                       
                             <!-- ============================================================== -->
-
                                           <!-- recent orders  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Pedidos Recientes</h5>
+                                    <h5 class="card-header">Llamadas Recientes</h5>
+<!-- TODO: importante!               @foreach($categorias as $categoria)
+                                    <div>{{$categoria->nombre}}</div>
+                                    @endforeach
+                                    <div>{{$categorias[1]->nombre}}</div> -->
+                                    <script>
+                                        var llamadas = JSON.parse('{{$llamadas}}'.replace(/&quot;/g,'"'));
+                                        console.log(llamadas);
+                                    </script>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
@@ -537,67 +615,80 @@
                                                     <tr class="border-0">
                                                         <th class="border-0">#</th>
                                                         <th class="border-0">Imagen</th>
-                                                        <th class="border-0">Nombre Producto</th>
-                                                        <th class="border-0">Id Producto</th>
-                                                        <th class="border-0">Cantidad</th>
-                                                        <th class="border-0">Precio</th>
-                                                        <th class="border-0">Tiempo Pedido</th>
+                                                        <th class="border-0">Nombre Prestador</th>
+                                                        <th class="border-0">Id Prestador</th>
+                                                        <!--th class="border-0">Cantidad</th-->
+                                                        <!--th class="border-0">Precio</th-->
+                                                        <th class="border-0">Fecha Pedido</th>
                                                         <th class="border-0">Cliente</th>
                                                         <th class="border-0">Estado</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>1</td>
+                                                        <td>{{$llamadas[0]->id}}</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[0]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Product #1 </td>
-                                                        <td>id000001 </td>
-                                                        <td>20</td>
-                                                        <td>$80.00</td>
-                                                        <td>27-08-2018 01:22:12</td>
-                                                        <td>Patricia J. King </td>
-                                                        <td><span class="badge-dot badge-brand mr-1"></span>EnTransito </td>
+                                                        <td>{{$llamadas[0]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[0]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[0]->created_at}}</td>
+                                                        <td>{{$llamadas[0]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[0]->estado_pedido}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>2</td>
+                                                        <td>{{$llamadas[1]->id}}</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[1]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Product #2 </td>
-                                                        <td>id000002 </td>
-                                                        <td>12</td>
-                                                        <td>$180.00</td>
-                                                        <td>25-08-2018 21:12:56</td>
-                                                        <td>Rachel J. Wicker </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
+                                                        <td>{{$llamadas[1]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[1]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[1]->created_at}}</td>
+                                                        <td>{{$llamadas[1]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[1]->estado_pedido}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>3</td>
+                                                        <td>{{$llamadas[2]->id}}</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[2]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Product #3 </td>
-                                                        <td>id000003 </td>
-                                                        <td>23</td>
-                                                        <td>$820.00</td>
-                                                        <td>24-08-2018 14:12:77</td>
-                                                        <td>Michael K. Ledford </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
+                                                        <td>{{$llamadas[2]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[2]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[2]->created_at}}</td>
+                                                        <td>{{$llamadas[2]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[2]->estado_pedido}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>4</td>
+                                                        <td>{{$llamadas[3]->id}}</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[3]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Product #4 </td>
-                                                        <td>id000004 </td>
-                                                        <td>34</td>
-                                                        <td>$340.00</td>
-                                                        <td>23-08-2018 09:12:35</td>
-                                                        <td>Michael K. Ledford </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Entregado </td>
+                                                        <td>{{$llamadas[3]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[3]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[3]->created_at}}</td>
+                                                        <td>{{$llamadas[3]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[3]->estado_pedido}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{$llamadas[4]->id}}</td>
+                                                        <td>
+                                                            <div class="m-r-10"><img src="{{asset('assets/images/').'/'.$llamadas[4]->imagen_pres}}" alt="user" class="rounded" width="45"></div>
+                                                        </td>
+                                                        <td>{{$llamadas[4]->nombre_pres}}</td>
+                                                        <td>{{$llamadas[4]->pres_id}}</td>
+                                                        <!--td>20</td-->
+                                                        <!--td>$80.00</td-->
+                                                        <td>{{$llamadas[4]->created_at}}</td>
+                                                        <td>{{$llamadas[4]->nombre_user}}</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>{{$llamadas[4]->estado_pedido}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
@@ -610,90 +701,88 @@
                             </div>
                             <!-- ============================================================== -->
                             <!-- end recent orders  -->
-
-    
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- customer acquistion  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Customer Acquisition</h5>
-                                    <div class="card-body">
-                                        <div class="ct-chart ct-golden-section" style="height: 354px;"></div>
-                                        <div class="text-center">
-                                            <span class="legend-item mr-2">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Returning</span>
-                                            </span>
-                                            <span class="legend-item mr-2">
-
-                                                    <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">First Time</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end customer acquistion  -->
                             <!-- ============================================================== -->
                         </div>
-                        <div class="row">
+                        <!--div class="row"-->
                             <!-- ============================================================== -->
               				                        <!-- product category  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <!--div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header"> Product Category</h5>
+                                    <h5 class="card-header"> Prestador Grupo</h5>
                                     <div class="card-body">
                                         <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
                                         <div class="text-center m-t-40">
                                             <span class="legend-item mr-3">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">Man</span>
+                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">ExAgua</span>
                                             </span>
                                             <span class="legend-item mr-3">
                                                 <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Woman</span>
+                                            <span class="legend-text">Energía</span>
                                             </span>
                                             <span class="legend-item mr-3">
                                                 <span class="fa-xs text-info mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Accessories</span>
+                                            <span class="legend-text">Climatización</span>
                                             </span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end product category  -->
                                    <!-- product sales  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <!--div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <!-- <div class="float-right">
-                                                <select class="custom-select">
-                                                    <option selected>Today</option>
-                                                    <option value="1">Weekly</option>
-                                                    <option value="2">Monthly</option>
-                                                    <option value="3">Yearly</option>
-                                                </select>
-                                            </div> -->
-                                        <h5 class="mb-0"> Product Sales</h5>
+{{--                                         <div class="float-right">
+                                            <select class="custom-select">
+                                                <option selected>Today</option>
+                                                <option value="1">Weekly</option>
+                                                <option value="2">Monthly</option>
+                                                <option value="3">Yearly</option>
+                                            </select>
+                                        </div> --}}
+                                        <h5 class="mb-0"> Prestador Grupo</h5>
                                     </div>
                                     <div class="card-body">
                                         <div class="ct-chart-product ct-golden-section"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end product sales  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                            <!-- ============================================================== -->
+                            <!-- customer acquistion  -->
+                            <!-- ============================================================== -->
+                            <!--div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">Pedidos de Clientes</h5>
+                                    <div class="card-body">
+                                        <div class="ct-chart ct-golden-section" style="height: 354px;"></div>
+                                        <div class="text-center">
+                                            <span class="legend-item mr-2">
+                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
+                                            <span class="legend-text">Recompra</span>
+                                            </span>
+                                            <span class="legend-item mr-2">
+
+                                            <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
+                                            <span class="legend-text">Primera vez</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div-->
+                            <!-- ============================================================== -->
+                            <!-- end customer acquistion  -->
+                            <!-- ============================================================== -->
+                            <!--div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12"-->
                                 <!-- ============================================================== -->
                                 <!-- top perfomimg  -->
                                 <!-- ============================================================== -->
-                                <div class="card">
+                       <!--         <div class="card">
                                     <h5 class="card-header">Top Performing Campaigns</h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
@@ -745,18 +834,18 @@
                                             </table>
                                         </div>
                                     </div>
-                                </div>
+                                </div-->
                                 <!-- ============================================================== -->
                                 <!-- end top perfomimg  -->
                                 <!-- ============================================================== -->
-                            </div>
-                        </div>
+                            <!--/div-->
+                        
 
-                        <div class="row">
+                         <!--div class="row"-->
                             <!-- ============================================================== -->
                             <!-- sales  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<!--                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">Sales</h5>
@@ -768,14 +857,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ============================================================== -->
                             <!-- end sales  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- new customer  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<!--                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">New Customer</h5>
@@ -787,14 +876,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ============================================================== -->
                             <!-- end new customer  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- visitor  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<!--                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">Visitor</h5>
@@ -806,14 +895,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ============================================================== -->
                             <!-- end visitor  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- total orders  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<!--                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">Total Orders</h5>
@@ -825,11 +914,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ============================================================== -->
                             <!-- end total orders  -->
                             <!-- ============================================================== -->
-                        </div>
+                        <!--/div-->
                         <div class="row">
                             <!-- ============================================================== -->
                             <!-- total revenue  -->
@@ -842,11 +931,15 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Revenue by Category</h5>
+                                    <h5 class="card-header">Prestador Categoria</h5>
                                     <div class="card-body">
                                         <div id="c3chart_category" style="height: 420px;"></div>
                                     </div>
                                 </div>
+                                <script>
+                                    var cuentas = JSON.parse('{{$jsonPresCount}}'.replace(/&quot;/g,'"'));
+                                    console.log(cuentas);
+                                </script>
                             </div>
                             <!-- ============================================================== -->
                             <!-- end category revenue  -->
@@ -854,50 +947,54 @@
 
                             <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header"> Total Revenue</h5>
+                                    <h5 class="card-header"> Total Llamadas</h5>
                                     <div class="card-body">
                                         <div id="morris_totalrevenue"></div>
                                     </div>
                                     <div class="card-footer">
-                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
+                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">6</span><span class="text-success float-right">+400.00% interanual</span></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <!--div class="row"-->
+                            <!--div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12"-->
                                 <!-- ============================================================== -->
                                 <!-- social source  -->
                                 <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header"> Sales By Social Source</h5>
+                                <!--div class="card">
+                                    <h5 class="card-header"> Ventas por Grupo</h5>
                                     <div class="card-body p-0">
                                         <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Facebook</span><span class="social-sales-count text-dark">120 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">{{$grupos[0]->nombre}}</span><span class="social-sales-count text-dark">120 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Twitter</span><span class="social-sales-count text-dark">99 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">{{$grupos[1]->nombre}}</span><span class="social-sales-count text-dark">99 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Instagram</span><span class="social-sales-count text-dark">76 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">{{$grupos[2]->nombre}}</span><span class="social-sales-count text-dark">76 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Pinterest</span><span class="social-sales-count text-dark">56 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">{{$grupos[3]->nombre}}</span><span class="social-sales-count text-dark">56 Ventas</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Google Plus</span><span class="social-sales-count text-dark">36 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">{{$grupos[4]->nombre}}</span><span class="social-sales-count text-dark">36 Ventas</span>
                                             </li>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">{{$grupos[5]->nombre}}</span><span class="social-sales-count text-dark">16 Ventas</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">{{$grupos[7]->nombre}}</span><span class="social-sales-count text-dark">13 Ventas</span>
+                                            </li>   
                                         </ul>
                                     </div>
                                     <div class="card-footer text-center">
                                         <a href="#" class="btn-primary-link">View Details</a>
                                     </div>
-                                </div>
+                                </div-->
                                 <!-- ============================================================== -->
                                 <!-- end social source  -->
                                 <!-- ============================================================== -->
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <!--/div-->
+                            <!--div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"-->
                                 <!-- ============================================================== -->
                                 <!-- sales traffice source  -->
                                 <!-- ============================================================== -->
-                                <div class="card">
+                                <!--div class="card">
                                     <h5 class="card-header"> Sales By Traffic Source</h5>
                                     <div class="card-body p-0">
                                         <ul class="traffic-sales list-group list-group-flush">
@@ -921,28 +1018,28 @@
                                         <a href="#" class="btn-primary-link">View Details</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end sales traffice source  -->
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- sales traffic country source  -->
                             <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                            <!--div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Sales By Country Traffic Source</h5>
+                                    <h5 class="card-header">Ventas por provincia</h5>
                                     <div class="card-body p-0">
                                         <ul class="country-sales list-group list-group-flush">
-                                            <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
-                                                <span class="">United States</span><span class="float-right text-dark">78%</span>
+                                            <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-ar" title="us" id="us"></i> </span>
+                                                <span class="">Córdoba</span><span class="float-right text-dark">78%</span>
                                             </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ca" title="ca" id="ca"></i></span><span class="">Canada</span><span class="float-right text-dark">7%</span>
+                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ar" title="ca" id="ca"></i></span><span class="">Buenos Aires</span><span class="float-right text-dark">7%</span>
                                             </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ru" title="ru" id="ru"></i></span><span class="">Russia</span><span class="float-right text-dark">4%</span>
+                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ar" title="ru" id="ru"></i></span><span class="">Capital Federal</span><span class="float-right text-dark">4%</span>
                                             </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-in" title="in" id="in"></i></span><span class="">India</span><span class="float-right text-dark">12%</span>
+                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-ar" title="in" id="in"></i></span><span class="">Santa Fe</span><span class="float-right text-dark">12%</span>
                                             </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i></span><span class="">France</span><span class="float-right text-dark">16%</span>
+                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-ar" title="fr" id="fr"></i></span><span class="">Mendoza</span><span class="float-right text-dark">16%</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -950,11 +1047,11 @@
                                         <a href="#" class="btn-primary-link">View Details</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- ============================================================== -->
                             <!-- end sales traffice country source  -->
                             <!-- ============================================================== -->
-                        </div>
+                        <!--/div-->
                     </div>
                 </div>
             </div>
@@ -965,7 +1062,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                             Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                             Copyright © 2020 Pornto Service. All rights reserved.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">

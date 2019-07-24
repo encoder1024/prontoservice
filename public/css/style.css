@@ -80,7 +80,8 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 	top: 0;
 	left: 0;
     z-index: 9999;
-	background: linear-gradient(50deg, rgb(81, 255, 182), rgb(87, 160, 255));
+	/*background: linear-gradient(50deg, rgb(81, 255, 182), rgb(87, 160, 255));*/
+    background: linear-gradient(50deg, rgb(82, 228, 119), rgb(0, 255, 0));
 }
 .overlay .overlay-close {
     width: 50px;
@@ -928,7 +929,8 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 
 #footer {
     /*background: linear-gradient(180deg, rgb(0, 190, 111), rgb(87, 160, 255));*/
-    background-color: #39c;
+    background: linear-gradient(50deg, rgb(82, 228, 119), rgb(0, 255, 0));
+    /*background-color: #39c;*/
     color:white;
     padding:40px 0;
 }
