@@ -1,0 +1,1 @@
+php artisan make:model ModelName -cr // Crea el modelo y el controller como recurso con sus metodos ya disponibles.

@@ -33,7 +33,7 @@
                 <div class="navigation" id="navigation-scroll">
                         <div class="row">
                             <div class="col-md-11 col-xs-10">
-                                <a href="index.html"><span id="logo"><strong class="strong">Pronto</strong> Service</span></a>
+                                <a href="#"><span id="logo"><strong class="strong">Pronto</strong> Service</span></a>
                             </div>
                             <div class="col-md-1 col-xs-2">
                                 <p class="nav-button">
@@ -55,10 +55,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="banner-text">
-                             <h2 class="animation-box wow bounceIn animated"><strong class="strong">Un toque para</strong><br>
-                            todas las necesidades</h2>
+                             <h2 class="animation-box wow bounceIn animated"><strong class="strong">Una solución para</strong><br>
+                            todas tus necesidades</h2>
                             <p>
-                                 Pronto Service ha sido descargada por 10K+ personas desde 13 paises alrededor del mundo en los últimos tres meses. Descargar esta aplicación es gratis en tu dispositivo Android. Comentarios y calificaciones son muy apreciadas.
+                                 Pronto Service ha sido descargada por más de 1000 personas en los últimos meses. Descargar esta aplicación es gratis en tu dispositivo Android. Comentarios y calificaciones son muy apreciadas.
                             </p>
                             <a href="#" class="btn btn-download wow animated fadeInLeft">
                             <i class="fa fa-android pull-left"></i>
@@ -80,7 +80,7 @@
             <h2 class="animation-box wow bounceIn animated">CARACTERISTICAS</h2>
             <div class="virticle-line"></div>
             <div class="circle"></div>
-            <img src="img/feature.png" alt="feature" class="video img-responsive animation-box wow animated bounceInDown">
+            <!--img src="img/menu_principal_324x576.jpg" alt="feature" class="video img-responsive animation-box wow animated bounceInDown"-->
             <p>
                 Usa Pronto Service – La mejor App para resolver el mantenimiento de tu horar.
             </p>
@@ -97,15 +97,15 @@
                     <ul class="item-list-right item-list-big">
                         <li class="wow fadeInLeft animated"> <i class="fa fa-film"></i> 
                             <h3>Respuesta rápida</h3>
-                            <p>Your project looks great on any device. Content can be easily read and a user understands freely what you wanted.</p>
+                            <p>Los prestadores están a tu dsposición para recibir tu mensaje y contestarte para poner en marcha la solución.</p>
                         </li>
                         <li class="wow fadeInLeft animated"> <i class="fa fa-bolt"></i> 
                             <h3>Confianza</h3>
-                            <p>The set of ready made CSS files with different color schemes will help you in quick landing’s adaptation according to your benchmark style.</p>
+                            <p>El equipo de profesionales que presta servicios es calificado y evaluado por los mismos usuarios de la red.</p>
                         </li>
                         <li class="wow fadeInLeft animated"> <i class="fa fa-heart"></i> 
                             <h3>Cumplimiento </h3>
-                            <p>The graphic source file in PSD format is included in the archive.</p>
+                            <p>La app mejora el nivel de servicio y disponibilidad para darte una respuesta.</p>
                         </li>
                     </ul>
                 </div>
@@ -113,23 +113,23 @@
                     <ul class="item-list-left item-list-big">
                         <li class="wow fadeInRight animated"> <i class="fa fa-life-ring"></i>
                             <h3>Claridad</h3>
-                            <p>LUCY is shipped with well documented moduler codes. Meaningfull Comments in code will help you to customize it easily.</p>
+                            <p>Te brindamos la información del prestador y el contaco es en forma directa con el prestador.</p>
                         </li>
                         <li class="wow fadeInRight animated"> <i class="fa fa-lock"></i>
                             <h3>Fácil de usar</h3>
-                            <p>LUCY is easy to customize. No heavy coding is required to customize it with your real contents.</p>
+                            <p>En pocos click podrás pedir ayuda a los profesionales que necesites.</p>
                         </li>
                         <li class="wow fadeInRight animated"> <i class="fa fa-star"></i>
                             <h3>Disponibilidad</h3>
-                            <p>We will update LUCY and fix bugs if you found one for a long time.</p>
+                            <p>Puedes enviar mensajes a toda hora y el prestador estará para responderte.</p>
                         </li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-sm-pull-4 text-center">
                     <div class="animation-box wow bounceIn animated">
-                        <img class="highlight-left wow animated" src="img/spark.png" height="192" width="48" alt=""> 
-                        <img class="highlight-right wow animated" src="img/spark.png" height="192" width="48" alt="">
-                        <img class="screen" src="img/front.png" alt="" height="581" width="300">
+                        <img class="highlight-left wow animated" src="img/spark.png" height="192" width="96" alt=""> 
+                        <img class="highlight-right wow animated" src="img/spark.png" height="192" width="16" alt="">
+                        <img class="screen" src="img/menu_principal_324x576.jpg" alt="" height="576" width="324">
                     </div>
                 </div>
             </div>
@@ -149,7 +149,7 @@
                     </div>
                     <h3>Free App</h3>
                     <p>
-                        Your project looks great on any device. Content can be easily read and a user understands freely.
+                        Instala gratis la app en tu celular y comenzá a resolver tus problemas de mantenimiento de tu hogar.
                     </p>
                 </div>
                 <div class="col-sm-4 animation-box wow bounceIn animated">
@@ -158,7 +158,7 @@
                     </div>
                     <h3>Soluciones eficientes</h3>
                     <p>
-                        Your project looks great on any device. Content can be easily read and a user understands freely.
+                        Ganás tiempo y accedes a una red de profesionales de excelencia.
                     </p>
                 </div>
                 <div class="col-sm-4 wow animated fadeInRight">
@@ -167,7 +167,7 @@
                     </div>
                     <h3>Easy to Use</h3>
                     <p>
-                        Your project looks great on any device. Content can be easily read and a user understands freely.
+                        Con pocos click ya estás llamando o enviando un mensaje a tus profesionales de confianza.
                     </p>
                 </div>
             </div> <!-- /.row -->
@@ -180,7 +180,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 wow animated fadeInLeft">
-                    <img src="img/mb2.png" alt="" class="pull-right left-img">
+                    <img src="img/paraelusuario.jpg" alt="" class="pull-right left-img">
                 </div>
                 <div class="col-md-6 col-sm-6 wow animated fadeInRight">
                     <div class="features-list">
@@ -221,7 +221,7 @@
                     </div> <!-- .features-list -->
                 </div>
                 <div class="col-md-6 col-sm-6 wow animated fadeInRight">
-                    <img src="img/mb2v.png" alt="" class="pull-left right-img">
+                    <img src="img/paraelprestador.jpg" alt="" class="pull-left right-img">
                 </div>
             </div> <!-- /.row -->
         </div> <!-- /.container -->
@@ -229,7 +229,7 @@
 
 
     <!-- HHHHHHHHHHHHHHHHHH      Screenshots    HHHHHHHHHHHHHHHH -->
-
+<!--
     <section id="gallery" class="wrapper">
         <div class="container">
             <h2 class="animation-box wow bounceIn animated">SCREENSHOTS</h2>
@@ -277,17 +277,17 @@
             </div>
         </div>
     </section>
-
+-->
 
     <!-- HHHHHHHHHHHHHHHHHHHH    Testimonial    HHHHHHHHHHHHHHHHHHHHHH -->
-     <section id="testimonial" class="wrapper">
+<!--     <section id="testimonial" class="wrapper">
             <div class="container">
                 <div class="row main_content">
                     <div class="col-md-8 col-md-offset-2">
                         <div id="client-speech" class="owl-carousel owl-theme">
-                            <div class="item wow animated bounceInUp animated">
-                                <!-- <img class="img-circle img-responsive center-block test-img" src="img/test1.png" alt="text"> -->
-                                <p class="client-comment text-center">
+                          <div class="item wow animated bounceInUp animated">
+ -->                                 <!-- <img class="img-circle img-responsive center-block test-img" src="img/test1.png" alt="text"> -->
+<!--                                <p class="client-comment text-center">
                                    Good camera This is a good camera app with lots of features. Got it to replace the one that came with the phone, one which froze up often. It is a little slow to boot up, and that keeps it from getting five stars.
                                 </p>
                                 <div class="row text-center">
@@ -296,7 +296,7 @@
                             </div>
                             <div class="item wow animated bounceInUp animated">
                                 <!-- <img class="img-circle img-responsive center-block test-img" src="img/test2.png" alt="text"> -->
-                                <p class="client-comment text-center">
+  <!--                              <p class="client-comment text-center">
                                    Good camera This is a good camera app with lots of features. Got it to replace the one that came with the phone, one which froze up often. It is a little slow to boot up, and that keeps it from getting five stars.
                                 </p>
                                 <div class="row text-center">
@@ -305,7 +305,7 @@
                             </div>
                             <div class="item wow animated bounceInUp animated">
                                 <!-- <img class="img-circle img-responsive center-block test-img" src="img/test3.png" alt="text"> -->
-                                <p class="client-comment text-center">
+  <!--                              <p class="client-comment text-center">
                                    Good camera This is a good camera app with lots of features. Got it to replace the one that came with the phone, one which froze up often. It is a little slow to boot up, and that keeps it from getting five stars.
                                 </p>
                                 <div class="row text-center">
@@ -320,7 +320,7 @@
 
     <!-- HHHHHHHHHHHHHHHHHH      Development Team      HHHHHHHHHHHHHHHH -->
 
-    <div id="team" class="wrapper">
+ <!--   <div id="team" class="wrapper">
         <div class="container-fluid">
             <h2 class="animation-box wow bounceIn animated">DEVELOPMENT TEAM</h2>
             <div class="virticle-line"></div>
@@ -372,15 +372,15 @@
                     </div>
                 </div>
             </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /#team -->
+<!--        </div> <!-- /.container -->
+<!--    </div> <!-- /#team -->
 
 
 
 
     <!-- HHHHHHHHHHHHHHHHHH        Price Table          HHHHHHHHHHHHHHHH -->
 
-    <section id="pricing" class="wrapper">
+ <!--   <section id="pricing" class="wrapper">
         <div class="banner-overlay bg-color-grad"></div>
         <div class="container">
             <div class="row">
@@ -426,8 +426,8 @@
                     </ul>
                 </div>
             </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </section> <!-- /#pricing -->
+ <!--       </div> <!-- /.container -->
+ <!--   </section> <!-- /#pricing -->
     
     <!-- HHHHHHHHHHHHHHHHHH        Contact Us          HHHHHHHHHHHHHHHH -->
     <section id="contact" class="wrapper">
@@ -435,59 +435,58 @@
             <div class="row">
                 <div class="col-md-3 contact-item col-sm-6 col-xs-12 wow animated fadeInLeft">
                     <i class="fa fa-map-marker"></i>
-                    <h3>Address</h3>
+                    <h3>Dirección</h3>
                     <p class="contact">
                         Lamabazar, 353 <br>
-                        Monuntain View, USA
+                        Córdoba, ARG
                     </p>
                 </div>
                 <div class="col-md-3 contact-item col-sm-6 col-xs-12 wow animated fadeInLeft">
                     <i class="fa fa-phone"></i>
                     <h3>Phone</h3>
                     <p class="contact">
-                        Local: 1-200-123-hello <br>
-                        Mobile: 2-800-123-hello
+                        Local: 0351 4880000 <br>
+                        Mobile: 351 704 8820
                     </p>
                 </div>
                 <div class="col-md-3 contact-item col-sm-6 col-xs-12 wow animated fadeInRight">
                     <i class="fa fa-print"></i>
                     <h3>Fax</h3>
                     <p class="contact">
-                        Office: 2148-287-8300 <br>
-                        Home: 2528-782-8200
+                        Office: 0351 4880000 <br>
                     </p>
                 </div>
                 <div class="col-md-3 contact-item col-sm-6 col-xs-12 wow animated fadeInRight">
                     <i class="fa fa-envelope"></i>
                     <h3>Email Address</h3>
                     <p class="contact">
-                        <a href="mailto:info@themewagon.com">info@themewagon.com</a> <br>
-                        <a href="www.themewagon.com">www.themewagon.com</a>
+                        <a href="mailto:hola@prontoservice.com.ar">hola@prontoservice</a> <br>
+                        <a href="www.prontoservice.com.ar">prontoservice.com.ar</a>
                     </p>
                 </div>
-            </div> <!-- /.row -->
-            <form class="row form wrapper">
+            </div> 
+            <!--form class="row form wrapper">
                 <h3>Leave A Message</h3>
                 <div class="col-sm-4 col-xs-12 form-group">
                     <label class="sr-only">Name</label>
                     <input name="name" class="form-control" type="text" placeholder="First Name">
-                </div> <!-- /.form-group -->
+                </div> 
                 <div class="col-sm-4 col-xs-12 form-group">
                     <label class="sr-only">Email</label>
                     <input name="email" class="form-control" type="email" placeholder="Email address">
-                </div> <!-- /.form-group -->
+                </div> 
                 <div class="col-sm-4 col-xs-12 form-group">
                     <label class="sr-only">Website</label>
                     <input name="website" class="form-control" type="text" placeholder="Your website">
-                </div> <!-- /.form-group -->
+                </div> 
                 <div class="row">
                     <div class="col-md-12 col-xs-12 form-group">
                         <label class="sr-only">Message</label>
                         <textarea class="message form-control" placeholder="Write message"></textarea>
-                    </div> <!-- /.form-group -->
+                    </div> 
                     <input class="btn btn-sub" type="submit" value="Send Message">
                 </div>
-            </form> <!-- /.row -->
+            </form-->
         </div> <!-- /.container -->
     </section> <!-- /#contact -->
 
@@ -507,10 +506,10 @@
             </ul>
 
             <div class="copyright">
-                <div class="credits">
+                <!--div class="credits">
                     Made With <i class="fa fa-heart"></i> by <a href="http://www.themewagon.com" target="_blank">ThemeWagon</a>
-                </div>
-                <div>©2019 domozoom, todos los derechos reservados.</div>
+                </div-->
+                <div>©2019 ProntoService, todos los derechos reservados.</div>
             </div>
         </div><!-- container -->
     </section>
@@ -528,10 +527,10 @@
         <nav>
         <ul>
             <li class="hideit"><a href="#header">Home</a></li>
-            <li class="hideit"><a href="#bigfeatures">Feature</a></li>
-            <li class="hideit"><a href="#speciality">Speciality</a></li>
-            <li class="hideit"><a href="#gallery">Gallery</a></li>
-            <li class="hideit"><a href="#testimonial">Testimonial</a></li>
+            <li class="hideit"><a href="#bigfeatures">Caracteristicas</a></li>
+            <li class="hideit"><a href="#speciality">Especialidades</a></li>
+            <!--li class="hideit"><a href="#gallery">Gallery</a></li-->
+            <!--li class="hideit"><a href="#testimonial">Testimonial</a></li-->
             <!-- <li class="hideit"><a href="#team">Team</a></li> -->
             <li class="hideit"><a href="#contact">Contact Us</a></li>
         </ul>

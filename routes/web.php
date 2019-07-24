@@ -13,12 +13,24 @@
 
 Route::get('/', 'FrontEndController@index');
 
-use App\StockPedidos;
+//Route::get('/stock', 'CategoriaController@index');
 
-Route::get('/stock', function() {
-	
-	$stock = StockPedidos::all();
-   	
-    return view('web.dashboar')->with('stock', $stock);
+Route::resource('categorias', 'CategoriaController');
 
-});
+Route::resource('grupos', 'GrupoController');
+
+Route::resource('localidads', 'LocalidadController');
+
+Route::resource('prestadors', 'PrestadorController');
+
+Route::resource('provincias', 'ProvinciaController');
+
+Route::resource('servicios', 'ServicioController');
+
+Route::resource('servicioprestadors', 'ServicioPrestadorController');
+
+Route::resource('llamadas', 'LlamadaController');
+
+Auth::routes();
+
+Route::get('/stock', 'HomeController@index')->name('home');
